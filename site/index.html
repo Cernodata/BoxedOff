@@ -119,8 +119,114 @@
     color: #f4f0e8;
   }
   .hero-copy .kicker, .hero-copy .fine { color: #b7b1a6; }
-  .hero-copy .post-row input { color: #f4f0e8; border-bottom-color: #f4f0e8; }
+  .hero-copy .post-row input { color: #f4f0e8; border-bottom-color: #f4f0e8; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
   .hero-copy .post-row input::placeholder { color: #8a8680; }
+  .hero-copy .post-row input.post-busy { border-bottom-color: var(--kiln); box-shadow: 0 2px 0 0 rgba(232, 66, 26, 0.35); }
+  .hero-copy .post-row input.post-yes { border-bottom-color: #7dd4a8; box-shadow: 0 2px 0 0 rgba(125, 212, 168, 0.45); }
+  .hero-copy .post-row input.post-no { border-bottom-color: #d4846a; box-shadow: 0 2px 0 0 rgba(212, 132, 106, 0.4); }
+  .btn.is-busy { opacity: 0.85; cursor: wait; position: relative; }
+  .btn.is-busy::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    border: 2px solid #121212;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .post-feedback {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-top: 18px;
+    max-width: 460px;
+    padding: 14px 16px;
+    border: 1px solid #3a3a3a;
+    background: #1a1a1a;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.28s ease, transform 0.28s ease, border-color 0.28s ease;
+  }
+  .post-feedback.is-visible { opacity: 1; transform: translateY(0); }
+  .post-feedback.pop { animation: feedback-pop 0.45s ease; }
+  @keyframes feedback-pop {
+    0% { transform: scale(0.98); }
+    45% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  .post-feedback[data-state="yes"] { border-color: #7dd4a8; }
+  .post-feedback[data-state="no"], .post-feedback[data-state="bad"] { border-color: #d4846a; }
+  .post-feedback[data-state="checking"] { border-color: var(--kiln); }
+  .post-feedback-mark {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+    border: 2px solid #6d675f;
+    border-radius: 50%;
+    position: relative;
+  }
+  .post-feedback[data-state="checking"] .post-feedback-mark {
+    border-color: var(--kiln);
+    border-top-color: transparent;
+    animation: spin 0.7s linear infinite;
+  }
+  .post-feedback[data-state="yes"] .post-feedback-mark {
+    border-color: #7dd4a8;
+    background: #7dd4a8;
+  }
+  .post-feedback[data-state="yes"] .post-feedback-mark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 12px;
+    border: solid #121212;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .post-feedback[data-state="no"] .post-feedback-mark,
+  .post-feedback[data-state="bad"] .post-feedback-mark {
+    border-color: #d4846a;
+  }
+  .post-feedback[data-state="no"] .post-feedback-mark::before,
+  .post-feedback[data-state="no"] .post-feedback-mark::after,
+  .post-feedback[data-state="bad"] .post-feedback-mark::before,
+  .post-feedback[data-state="bad"] .post-feedback-mark::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    width: 2px;
+    height: 12px;
+    background: #d4846a;
+    border-radius: 1px;
+  }
+  .post-feedback[data-state="no"] .post-feedback-mark::before,
+  .post-feedback[data-state="bad"] .post-feedback-mark::before { transform: rotate(45deg); }
+  .post-feedback[data-state="no"] .post-feedback-mark::after,
+  .post-feedback[data-state="bad"] .post-feedback-mark::after { transform: rotate(-45deg); }
+  .post-feedback-title { display: block; font-weight: 600; font-size: 16px; margin: 0 0 4px; color: #f4f0e8; }
+  .post-feedback-detail { margin: 0; font-size: 14px; line-height: 1.45; color: #b7b1a6; }
+  .book-feedback { background: var(--stone); border-color: var(--line); max-width: none; }
+  .book-feedback[data-state="yes"] { border-color: var(--ink); background: #fff; }
+  .book-feedback[data-state="yes"] .post-feedback-title { color: var(--ink); }
+  .book-feedback[data-state="yes"] .post-feedback-detail { color: var(--muted); }
+  .book-feedback[data-state="yes"] .post-feedback-mark { border-color: var(--kiln); background: var(--kiln); }
+  .field input.post-busy { border-bottom-color: var(--kiln); }
+  .field input.post-yes { border-bottom-color: var(--ink); }
+  .field input.post-no { border-bottom-color: #7a3b2e; }
+  #price-panel.postcode-hit {
+    animation: panel-hit 0.9s ease;
+    box-shadow: 0 0 0 1px var(--kiln);
+  }
+  @keyframes panel-hit {
+    0% { box-shadow: 0 0 0 0 rgba(232, 66, 26, 0.5); }
+    100% { box-shadow: 0 0 0 1px var(--kiln); }
+  }
   .specs { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
   .specs li { border: 1px solid #3a3a3a; padding: 8px 10px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
   .kicker {
@@ -388,9 +494,16 @@
       <form class="post-row" id="hero-form">
         <label class="sr" for="hero-postcode">Postcode</label>
         <input id="hero-postcode" name="postcode" placeholder="Postcode" autocomplete="postal-code" enterkeyhint="search">
-        <button class="btn" type="submit">Check delivery</button>
+        <button class="btn" type="submit" id="hero-check">Check delivery</button>
       </form>
-      <p class="fine" id="hero-status" aria-live="polite">From £50 a week. Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.</p>
+      <div class="post-feedback" id="hero-feedback" data-state="idle" aria-live="polite" hidden>
+        <span class="post-feedback-mark" aria-hidden="true"></span>
+        <div>
+          <strong class="post-feedback-title" id="hero-feedback-title"></strong>
+          <p class="post-feedback-detail" id="hero-feedback-detail"></p>
+        </div>
+      </div>
+      <p class="fine" id="hero-hint">From £50 a week. Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.</p>
     </div>
     <figure class="hero-photo">
       <img src="/brand/media/bamboo-unit.jpg?v=qr" width="1280" height="720" alt="A black 10ft storage container for hire, with one bamboo bay and an orange corner, on a driveway">
@@ -428,7 +541,13 @@
           <label class="field" for="book-postcode" style="margin-top:18px">Postcode
             <input id="book-postcode" autocomplete="postal-code" placeholder="WA16 8AB">
           </label>
-          <p class="status" id="area-status" aria-live="polite"></p>
+          <div class="post-feedback book-feedback" id="book-feedback" data-state="idle" aria-live="polite" hidden>
+            <span class="post-feedback-mark" aria-hidden="true"></span>
+            <div>
+              <strong class="post-feedback-title" id="book-feedback-title"></strong>
+              <p class="post-feedback-detail" id="book-feedback-detail"></p>
+            </div>
+          </div>
           <p class="fine">Knutsford, Alderley Edge, Wilmslow and Holmes Chapel, plus about 12 km around the middle of those four.</p>
         </div>
         <div class="panel" id="date-panel">
@@ -655,6 +774,15 @@ const state = {
 const lookupCache = new Map();
 let lookupTimer = 0;
 let lookupSeq = 0;
+const FEEDBACK = {
+  empty: { title: "Enter a postcode", detail: "A full UK postcode, like WA16 8AB." },
+  partial: { title: "Nearly there", detail: "Add the rest of the postcode so we can check the round." },
+  checking: { title: "Checking your postcode", detail: "One moment while we see if we deliver to you." },
+  yes: (name) => ({ title: "You're on the round", detail: "We deliver to " + name + ". Pick your weeks and a day below." }),
+  no: { title: "Not on this round yet", detail: "Leave your email on the right and we'll write when we reach you." },
+  bad: { title: "We don't recognise that postcode", detail: "Check the spelling, or try a nearby postcode you know is correct." },
+  error: { title: "Could not check just now", detail: "Try again in a moment. Your connection may have dropped." }
+};
 
 const gbp = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
 const dayFmt = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" });
@@ -663,8 +791,15 @@ const monthFmt = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeri
 const els = {
   heroPost: document.querySelector("#hero-postcode"),
   bookPost: document.querySelector("#book-postcode"),
-  heroStatus: document.querySelector("#hero-status"),
-  areaStatus: document.querySelector("#area-status"),
+  heroHint: document.querySelector("#hero-hint"),
+  heroFeedback: document.querySelector("#hero-feedback"),
+  heroFeedbackTitle: document.querySelector("#hero-feedback-title"),
+  heroFeedbackDetail: document.querySelector("#hero-feedback-detail"),
+  heroCheck: document.querySelector("#hero-check"),
+  bookFeedback: document.querySelector("#book-feedback"),
+  bookFeedbackTitle: document.querySelector("#book-feedback-title"),
+  bookFeedbackDetail: document.querySelector("#book-feedback-detail"),
+  pricePanel: document.querySelector("#price-panel"),
   total: document.querySelector("#total"),
   rateLine: document.querySelector("#rate-line"),
   hireLine: document.querySelector("#hire-line"),
@@ -693,55 +828,101 @@ function haversine(lat1, lng1, lat2, lng2) {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(p1) * Math.cos(p2) * Math.sin(dLng / 2) ** 2;
   return 2 * earth * Math.asin(Math.sqrt(h));
 }
-function scheduleLookup(immediate) {
+function delay(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+
+function scheduleLookup(immediate, options) {
   clearTimeout(lookupTimer);
-  const run = () => lookup(els.bookPost.value || els.heroPost.value);
-  if (immediate) run();
-  else lookupTimer = setTimeout(run, 350);
+  const run = () => lookup(els.bookPost.value || els.heroPost.value, options);
+  if (immediate) return lookup(els.bookPost.value || els.heroPost.value, options);
+  lookupTimer = setTimeout(run, 350);
 }
-async function lookup(raw) {
+
+function feedbackMessage(area) {
+  if (area.state === "yes") return FEEDBACK.yes(area.name);
+  return FEEDBACK[area.state] || FEEDBACK.empty;
+}
+
+function paintFeedback(box, titleEl, detailEl, area, pulse) {
+  if (!box) return;
+  const active = area.state !== "empty";
+  box.hidden = !active;
+  box.dataset.state = area.state;
+  box.classList.toggle("is-visible", active);
+  if (!active) return;
+  const copy = feedbackMessage(area);
+  titleEl.textContent = copy.title;
+  detailEl.textContent = copy.detail;
+  if (pulse) {
+    box.classList.remove("pop");
+    void box.offsetWidth;
+    box.classList.add("pop");
+  }
+}
+
+function postInputClass(input, area) {
+  input.classList.remove("post-busy", "post-yes", "post-no");
+  if (area.state === "checking") input.classList.add("post-busy");
+  else if (area.state === "yes") input.classList.add("post-yes");
+  else if (area.state === "no" || area.state === "bad" || area.state === "error") input.classList.add("post-no");
+}
+
+async function lookup(raw, options) {
+  const opts = options || {};
   const seq = ++lookupSeq;
   const s = strip(raw);
   if (s.length < 2) {
     state.area = { state: "empty" };
-    render();
-    return;
+    render({ pulse: opts.pulse });
+    return state.area;
   }
   if (!POSTCODE.test(s)) {
     state.area = { state: "partial" };
-    render();
-    return;
+    render({ pulse: opts.pulse });
+    return state.area;
   }
-  if (lookupCache.has(s)) {
-    state.area = lookupCache.get(s);
-    render();
-    return;
+  const cached = lookupCache.get(s);
+  if (cached && !opts.animate) {
+    state.area = cached;
+    render({ pulse: opts.pulse });
+    return state.area;
   }
   state.area = { state: "checking" };
-  render();
+  render({ pulse: false });
+  const started = Date.now();
+  if (cached && opts.animate) await delay(420);
   try {
-    const res = await fetch("https://api.postcodes.io/postcodes/" + encodeURIComponent(s));
-    if (seq !== lookupSeq) return;
-    if (res.status === 404) {
-      state.area = { state: "bad" };
-      lookupCache.set(s, state.area);
-      render();
-      return;
+    let result = cached;
+    if (!result) {
+      const res = await fetch("https://api.postcodes.io/postcodes/" + encodeURIComponent(s));
+      if (seq !== lookupSeq) return state.area;
+      if (res.status === 404) {
+        result = { state: "bad" };
+      } else if (!res.ok) {
+        throw new Error("lookup");
+      } else {
+        const hit = (await res.json()).result;
+        if (seq !== lookupSeq) return state.area;
+        const km = haversine(ROUND.lat, ROUND.lng, hit.latitude, hit.longitude);
+        const name = hit.admin_ward || hit.parish || hit.postcode;
+        result = km <= ROUND.km
+          ? { state: "yes", name, postcode: hit.postcode }
+          : { state: "no", name };
+      }
+      lookupCache.set(s, result);
     }
-    if (!res.ok) throw new Error("lookup");
-    const hit = (await res.json()).result;
-    if (seq !== lookupSeq) return;
-    const km = haversine(ROUND.lat, ROUND.lng, hit.latitude, hit.longitude);
-    const name = hit.admin_ward || hit.parish || hit.postcode;
-    state.area = km <= ROUND.km
-      ? { state: "yes", name, postcode: hit.postcode }
-      : { state: "no", name };
-    lookupCache.set(s, state.area);
-    render();
+    if (opts.animate) {
+      const wait = 420 - (Date.now() - started);
+      if (wait > 0) await delay(wait);
+    }
+    if (seq !== lookupSeq) return state.area;
+    state.area = result;
+    render({ pulse: opts.pulse, celebrate: opts.pulse && result.state === "yes" });
+    return state.area;
   } catch (err) {
-    if (seq !== lookupSeq) return;
+    if (seq !== lookupSeq) return state.area;
     state.area = { state: "error" };
-    render();
+    render({ pulse: opts.pulse });
+    return state.area;
   }
 }
 function today() {
@@ -761,47 +942,38 @@ function weekly() { return RATES.storage; }
 function hireTotal() { return weekly() * state.weeks; }
 function grand() { return hireTotal() + RATES.delivery; }
 
-function syncPost(value, source, immediate) {
+async function syncPost(value, source, immediate, options) {
   if (source !== "hero") els.heroPost.value = value;
   if (source !== "book") els.bookPost.value = value;
-  scheduleLookup(immediate);
+  if (immediate) return lookup(els.bookPost.value || els.heroPost.value, options);
+  scheduleLookup(false, options);
 }
 
-function render() {
+function render(renderOpts) {
+  const opts = renderOpts || {};
   const area = state.area;
+  const pulse = Boolean(opts.pulse);
   els.weeksLabel.textContent = state.weeks + (state.weeks === 1 ? " week" : " weeks");
   els.total.textContent = gbp.format(grand());
   els.rateLine.textContent = gbp.format(weekly()) + " × " + state.weeks + " weeks";
   els.hireLine.textContent = gbp.format(hireTotal());
 
-  if (area.state === "yes") {
-    els.areaStatus.textContent = "We deliver to " + area.name + ".";
-    els.areaStatus.className = "status yes";
-    els.heroStatus.textContent = "We deliver to " + area.name + ". Choose a week length, then a day.";
-  } else if (area.state === "no") {
-    els.areaStatus.textContent = "Not on this round yet.";
-    els.areaStatus.className = "status no";
-    els.heroStatus.textContent = "That postcode is outside the current round.";
-  } else if (area.state === "partial") {
-    els.areaStatus.textContent = "Add the rest of the postcode.";
-    els.areaStatus.className = "status";
-    els.heroStatus.textContent = "Add the rest of the postcode.";
-  } else if (area.state === "checking") {
-    els.areaStatus.textContent = "Checking that postcode…";
-    els.areaStatus.className = "status";
-    els.heroStatus.textContent = "Checking that postcode…";
-  } else if (area.state === "bad") {
-    els.areaStatus.textContent = "We don’t recognise that postcode.";
-    els.areaStatus.className = "status no";
-    els.heroStatus.textContent = "We don’t recognise that postcode.";
-  } else if (area.state === "error") {
-    els.areaStatus.textContent = "Couldn’t reach the postcode check. Try again in a moment.";
-    els.areaStatus.className = "status no";
-    els.heroStatus.textContent = "Couldn’t reach the postcode check. Try again in a moment.";
-  } else {
-    els.areaStatus.textContent = "";
-    els.areaStatus.className = "status";
-    els.heroStatus.textContent = "From £50 a week. Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.";
+  const showFeedback = area.state !== "empty";
+  els.heroHint.hidden = showFeedback;
+  paintFeedback(els.heroFeedback, els.heroFeedbackTitle, els.heroFeedbackDetail, area, pulse);
+  paintFeedback(els.bookFeedback, els.bookFeedbackTitle, els.bookFeedbackDetail, area, pulse);
+  postInputClass(els.heroPost, area);
+  postInputClass(els.bookPost, area);
+
+  const busy = area.state === "checking";
+  els.heroCheck.disabled = busy;
+  els.heroCheck.classList.toggle("is-busy", busy);
+  els.heroCheck.textContent = busy ? "Checking" : "Check delivery";
+
+  if (opts.celebrate && els.pricePanel) {
+    els.pricePanel.classList.remove("postcode-hit");
+    void els.pricePanel.offsetWidth;
+    els.pricePanel.classList.add("postcode-hit");
   }
 
   const covered = area.state === "yes";
@@ -861,10 +1033,19 @@ function renderMonth(covered) {
   }
 }
 
-document.querySelector("#hero-form").addEventListener("submit", (event) => {
+document.querySelector("#hero-form").addEventListener("submit", async (event) => {
   event.preventDefault();
-  syncPost(els.heroPost.value, "hero", true);
-  document.querySelector("#book").scrollIntoView({ behavior: "smooth" });
+  if (strip(els.heroPost.value).length < 2) {
+    state.area = { state: "partial" };
+    render({ pulse: true });
+    els.heroPost.focus();
+    return;
+  }
+  const area = await syncPost(els.heroPost.value, "hero", true, { animate: true, pulse: true });
+  if (area.state === "partial" || area.state === "bad" || area.state === "error") return;
+  window.setTimeout(() => {
+    document.querySelector("#book").scrollIntoView({ behavior: "smooth" });
+  }, 280);
 });
 els.heroPost.addEventListener("input", () => syncPost(els.heroPost.value, "hero"));
 els.bookPost.addEventListener("input", () => syncPost(els.bookPost.value, "book"));

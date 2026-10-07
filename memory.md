@@ -2,6 +2,8 @@
 
 ## 2026-10-07 — Vercel and security
 
+Postcode check shows a feedback card, button spinner, input border states, and a brief success pulse when the round matches.
+
 Vercel runs `npm run build` → `dist/` with `index.html` at the deploy root plus `brand/`. Do not set dashboard Output Directory to `site`. `/site/*` redirects to `/`. Security headers in `vercel.json`. `.vercelignore` drops `memory.md`.
 
 ## 2026-10-07 — GitHub
