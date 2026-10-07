@@ -1,5 +1,9 @@
 # BoxedOff
 
+## 2026-10-07 — GitHub
+
+Repository: https://github.com/Cernodata/BoxedOff (public). `README.md` and `.gitignore` at repo root. Push with `git -c safe.directory=W:/Cursor/BoxedOff push` if on the W: drive.
+
 ## 2026-10-07 — Three brand directions
 
 Built a brand presentation at `brand/index.html`. Open it in a browser. Photographs live in `brand/media/`.
