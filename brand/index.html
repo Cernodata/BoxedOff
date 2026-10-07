@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BoxedOff — Three brand directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #e8e2d6;
+    --paper-2: #f4f0e8;
+    --ink: #1b1a17;
+    --muted: #6d675f;
+    --line: #d4cdc0;
+    --studio: "Instrument Sans", system-ui, sans-serif;
+    --serif: "Instrument Serif", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--studio);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  button, input { font-family: inherit; }
+
+  .nav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 196px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    z-index: 5;
+  }
+  .nav .brand {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+  }
+  .nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .nav a { text-decoration: none; color: var(--muted); }
+  .nav a:hover { color: var(--ink); }
+  .nav .foot {
+    margin-top: auto;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  main { margin-left: 196px; }
+
+  .cover {
+    min-height: 100vh;
+    padding: 64px 72px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 84px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin: 18px 0 0;
+    max-width: 14ch;
+  }
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: end;
+    margin-top: 48px;
+  }
+  .lede { font-size: 18px; max-width: 38ch; margin: 0; }
+  .routes { display: flex; flex-direction: column; }
+  .routes a {
+    display: grid;
+    grid-template-columns: 28px 52px 1fr;
+    gap: 14px;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .routes a:last-child { border-bottom: 1px solid var(--line); }
+  .sw { width: 28px; height: 28px; }
+  .routes small { display: block; color: var(--muted); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .routes strong { font-weight: 500; }
+
+  section { padding: 72px; border-bottom: 1px solid var(--line); }
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 18px;
+  }
+  h3 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; margin: 0 0 12px; }
+  p { margin: 0 0 12px; }
+  .narrow { max-width: 68ch; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .split-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+  .name-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 28px; }
+  .name-card {
+    background: var(--paper-2);
+    min-height: 160px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+  }
+  .name-card.pick { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .name-card .sample { font-size: 22px; line-height: 1; }
+  .name-card span { font-size: 12px; color: var(--muted); }
+
+  .rule-list { margin: 0; padding: 0; list-style: none; }
+  .rule-list li { padding: 14px 0; border-top: 1px solid var(--line); }
+  .rule-list strong { display: block; font-weight: 500; }
+
+  .concept { padding: 0; border-bottom: 1px solid var(--line); }
+  .opener {
+    min-height: 88vh;
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .opener h2 { font-size: clamp(56px, 8vw, 104px); max-width: 10ch; }
+  .opener .meta { display: flex; justify-content: space-between; gap: 24px; font-size: 14px; max-width: 720px; }
+
+  .block { padding: 72px; }
+  .block + .block { border-top: 1px solid rgba(0,0,0,0.08); }
+
+  /* Concept palettes as page grounds */
+  .plan { background: #f3f0ea; color: #1c1b19; }
+  .plan .muted { color: #6e675e; }
+  .stamp { background: #121212; color: #f4f0e8; }
+  .stamp .muted { color: #b7b1a6; }
+  .threshold { background: #f3eee6; color: #2a2724; }
+  .threshold .muted { color: #6d645b; }
+
+  .logo-board {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    grid-template-areas:
+      "primary primary reversed"
+      "horizontal compact icon"
+      "mono mono mono"
+      "storage care living";
+    gap: 10px;
+  }
+  .tile {
+    padding: 28px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .tile .cap { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.62; }
+  .tile.primary { grid-area: primary; min-height: 280px; }
+  .tile.reversed { grid-area: reversed; }
+  .tile.horizontal { grid-area: horizontal; }
+  .tile.compact { grid-area: compact; align-items: center; text-align: center; }
+  .tile.icon { grid-area: icon; align-items: center; }
+  .tile.mono { grid-area: mono; }
+  .tile.storage { grid-area: storage; }
+  .tile.care { grid-area: care; }
+  .tile.living { grid-area: living; }
+
+  .plan .tile { background: #e7e1d6; }
+  .plan .tile.reversed, .plan .tile.mono { background: #2e2c29; color: #f3f0ea; }
+  .stamp .tile { background: #1c1c1c; }
+  .stamp .tile.reversed { background: #f4f0e8; color: #121212; }
+  .stamp .tile.mono { background: #f4f0e8; color: #121212; }
+  .threshold .tile { background: #e7dfd4; }
+  .threshold .tile.reversed, .threshold .tile.mono { background: #2a2724; color: #f3eee6; }
+
+  .row { display: flex; align-items: center; gap: 16px; }
+  .stack { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .center { align-items: center; }
+
+  .wm1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.34em;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .sub1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    font-size: 11px;
+    color: #8a6a45;
+  }
+  .plan .tile.reversed .sub1, .plan .tile.mono .sub1 { color: #c6a27a; }
+  .wm2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    font-size: 34px;
+    line-height: 0.85;
+  }
+  .sub2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    font-size: 13px;
+    color: #e8421a;
+  }
+  .stamp .tile.reversed .sub2, .stamp .tile.mono .sub2 { color: #e8421a; }
+  .wm3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .sub3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+  }
+  .sub3.storage { color: #4a4038; }
+  .sub3.care { color: #3c4334; }
+  .sub3.living { color: #8d5a3c; }
+  .threshold .tile.reversed .sub3, .threshold .tile.mono .sub3 { color: #d7c3ae; }
+
+  .mark { display: block; }
+  .chips { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .chip { min-height: 88px; padding: 10px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 12px; }
+  .chip b { display: block; font-weight: 500; }
+  .type-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .specimen { font-size: 42px; line-height: 1.05; margin: 8px 0 0; }
+
+  .voice { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .lines { font-size: 28px; line-height: 1.25; margin: 0; }
+  .lines span { display: block; }
+
+  .photo-wrap { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 18px; align-items: start; }
+  .photo-wrap figure { margin: 0; }
+  .photo-wrap figcaption, .caption { font-size: 13px; margin-top: 8px; }
+  .elev {
+    background: transparent;
+    border: 1px solid currentColor;
+    border-color: rgba(127,127,127,0.35);
+  }
+
+  .apps { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 18px; }
+  .wear { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .card {
+    padding: 16px;
+    min-height: 180px;
+  }
+  .plan .card, .plan .elev, .plan .soft { background: #e7e1d6; }
+  .stamp .card, .stamp .elev, .stamp .soft { background: #1c1c1c; }
+  .threshold .card, .threshold .elev, .threshold .soft { background: #e7dfd4; }
+
+  .sites { display: grid; grid-template-columns: 1.35fr 0.5fr; gap: 22px; align-items: start; }
+  .browser, .phone { overflow: hidden; }
+  .plan .browser, .plan .phone { background: #f7f5f2; color: #1c1b19; }
+  .stamp .browser, .stamp .phone { background: #121212; color: #f4f0e8; }
+  .threshold .browser, .threshold .phone { background: #f6f1e8; color: #2a2724; }
+  .chrome, .phone-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.35; }
+  .hero-ui { display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
+  .hero-copy { padding: 36px 32px; display: flex; flex-direction: column; justify-content: space-between; }
+  .hero-copy h4 { font-size: 40px; line-height: 0.95; margin: 0 0 12px; font-weight: 400; }
+  .stamp .hero-copy h4 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; letter-spacing: -0.04em; font-size: 48px; }
+  .plan .hero-copy h4 { font-family: "Instrument Serif", serif; }
+  .threshold .hero-copy h4 { font-family: "Fraunces", serif; font-weight: 500; font-size: 36px; line-height: 1.05; }
+  .hero-ui img, .phone img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+  .field { display: flex; gap: 8px; margin-top: 18px; }
+  .field input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid currentColor;
+    padding: 10px 0;
+    color: inherit;
+    font-size: 14px;
+  }
+  .field button, .btn {
+    border: 0;
+    padding: 12px 16px;
+    cursor: default;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .plan .btn, .plan .field button { background: #2e2c29; color: #f3f0ea; }
+  .stamp .btn, .stamp .field button { background: #e8421a; color: #121212; font-weight: 700; }
+  .threshold .btn, .threshold .field button { background: #3c4334; color: #f3eee6; }
+  .phone { max-width: 280px; border-radius: 28px; border: 1px solid rgba(127,127,127,0.4); }
+  .phone .hero-copy { padding: 22px 18px 28px; }
+  .phone .hero-copy h4 { font-size: 32px; }
+  .steps { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+  .steps span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    padding: 6px 8px;
+    opacity: 0.75;
+  }
+  .socials { display: grid; grid-template-columns: 88px 88px 1fr; gap: 12px; align-items: stretch; }
+  .avatar, .fav {
+    display: grid;
+    place-items: center;
+  }
+  .avatar { border-radius: 50%; }
+  .post { min-height: 280px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+  .plan .post { background: #2e2c29; color: #f3f0ea; }
+  .stamp .post { background: #e8421a; color: #121212; }
+  .threshold .post { background: #3c4334; color: #f3eee6; }
+
+  .why {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.35;
+    max-width: 46ch;
+    margin: 0;
+  }
+  .stamp .why { font-family: var(--studio); font-size: 18px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 12px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .rec {
+    background: #f3eee6;
+    color: #2a2724;
+  }
+  .rec h2 { font-family: "Fraunces", serif; }
+
+  .sig {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 22px;
+    align-items: center;
+  }
+  .plaque {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+  }
+  .plan .plaque { background: #8a6a45; color: #2a2118; }
+  .stamp .plaque { background: #e8421a; color: #121212; height: 220px; width: 64px; align-items: center; }
+  .threshold .plaque { background: #c6a56a; color: #2a2724; }
+
+  @media (max-width: 980px) {
+    .nav { position: sticky; top: 0; left: auto; right: auto; bottom: auto; width: auto; flex-direction: row; align-items: center; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 14px 16px; gap: 18px; }
+    .nav ol { flex-direction: row; flex-wrap: nowrap; gap: 16px; }
+    .nav li, .nav a, .nav .brand { white-space: nowrap; flex-shrink: 0; }
+    .nav .foot { display: none; }
+    .opener .meta { flex-direction: column; }
+    section, article, .cover { scroll-margin-top: 72px; }
+    table { display: block; overflow-x: auto; }
+    main { margin-left: 0; }
+    .cover, section, .opener, .block { padding: 32px 20px; }
+    .cover-grid, .split, .split-3, .name-grid, .logo-board, .chips, .type-row, .voice, .photo-wrap, .apps, .sites, .wear, .socials, .sig {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+    .logo-board { grid-template-areas: "primary" "reversed" "horizontal" "compact" "icon" "mono" "storage" "care" "living"; }
+    .hero-ui { grid-template-columns: 1fr; }
+    .chips { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 46px; }
+  }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="brand">BOXEDOFF</div>
+  <ol>
+    <li><a href="#cover">Cover</a></li>
+    <li><a href="#name">Name</a></li>
+    <li><a href="#ask">The quiet ask</a></li>
+    <li><a href="#plan">01 The Plan</a></li>
+    <li><a href="#stamp">02 The Stamp</a></li>
+    <li><a href="#threshold">03 The Threshold</a></li>
+    <li><a href="#recommend">Recommendation</a></li>
+  </ol>
+  <div class="foot">October 2026<br>Brand directions</div>
+</nav>
+<main>
+  <header class="cover" id="cover">
+    <p class="kicker">BoxedOff · Three complete directions</p>
+    <div>
+      <h1>Three companies you could actually run.</h1>
+      <div class="cover-grid">
+        <p class="lede">Not three logos. Three visual languages, each capable of carrying storage now and care and living later, without looking like a container yard, a skip firm or a welfare hire company.</p>
+        <div class="routes">
+          <a href="#plan"><i class="sw" style="background:#2e2c29"></i><small>01</small><strong>The Plan</strong></a>
+          <a href="#stamp"><i class="sw" style="background:#e8421a"></i><small>02</small><strong>The Stamp</strong></a>
+          <a href="#threshold"><i class="sw" style="background:#6e7d62"></i><small>03</small><strong>The Threshold</strong></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="name">
+    <p class="label">Master name</p>
+    <h2>One word. No gap. Capitals.</h2>
+    <div class="split">
+      <div class="narrow">
+        <p>The useful thing about the name is that it is already a sentence ending. Renovating? BOXEDOFF. Need space? BOXEDOFF. That only works if the name is a single coined word, set like a stamp, not a description of what the product is.</p>
+        <p>A cube around the word is the first idea everyone has, and it traps the company inside storage. None of the three directions uses one. The master name stays BOXEDOFF even when the division changes.</p>
+      </div>
+      <ul class="rule-list">
+        <li><strong>BOXED OFF</strong> Turns a brand back into a phrase. Weaker to own, weaker to franchise.</li>
+        <li><strong>BoxedOff</strong> Looks like an app icon from 2014. Awkward on a metal badge and a truck.</li>
+        <li><strong>boxedoff</strong> Calm and premium, but it loses the stamp in the answer-line, and it clogs when engraved small.</li>
+        <li><strong>BOXEDOFF</strong> One legal wordmark for every lockup, every franchisee, every division. Capitals engrave cleanly at 40mm.</li>
+      </ul>
+    </div>
+    <div class="name-grid">
+      <div class="name-card"><div class="sample" style="font-family:Georgia,serif; letter-spacing:0.08em">BOXED OFF</div><span>Two words · reject</span></div>
+      <div class="name-card"><div class="sample" style="font-family:Georgia,serif">BoxedOff</div><span>Camel case · reject</span></div>
+      <div class="name-card"><div class="sample" style="font-family:Georgia,serif; font-variant:normal">boxedoff</div><span>Lowercase · reserve, do not lead</span></div>
+      <div class="name-card pick"><div class="sample" style="letter-spacing:0.18em; font-weight:500">BOXEDOFF</div><span>Recommended master treatment</span></div>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <p class="label">Architecture</p>
+    <h2>One brand. Three offers.</h2>
+    <div class="split-3">
+      <div>
+        <h3>Master</h3>
+        <p>BOXEDOFF is the only logo a neighbour needs to remember. Divisions never get their own symbols.</p>
+      </div>
+      <div>
+        <h3>Divisions</h3>
+        <p>STORAGE, CARE and LIVING sit under the wordmark in smaller tracked capitals. Same mark. Same colours. The word changes; the brand does not.</p>
+      </div>
+      <div>
+        <h3>What stays off</h3>
+        <p>No town names, no franchisee names, no padlocks, no medical crosses, no corrugated-metal clichés. High-visibility yellow is road kit, never a brand colour. It comes off at the customer’s door.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ask">
+    <p class="label">The unit as media</p>
+    <h2>The quiet ask.</h2>
+    <div class="split">
+      <div class="narrow">
+        <p>A unit outside a house for three months is advertising inventory the customer did not ask to host. Affluent driveways will not tolerate a billboard. The brand still has to be recognisable.</p>
+        <p>So the unit whispers and the truck speaks. Branding on a customer’s unit stays under eight percent of the elevation. A signature physical detail does the long-distance work. A small plate does the introduction. Curiosity, then a scan.</p>
+      </div>
+      <ul class="rule-list">
+        <li><strong>Distance</strong> A material or colour signature, not a slogan. Timber, kiln corner, or bamboo.</li>
+        <li><strong>Eye height</strong> Mark and wordmark on a plate beside the door, no larger than a letterbox.</li>
+        <li><strong>The ask</strong> One human line. “Need one?” or “Need some space?” Never a phone number in 200mm type.</li>
+        <li><strong>The scan</strong> A QR code no bigger than 28mm, with boxedoff.uk set beside it for people who will not scan.</li>
+        <li><strong>The truck</strong> This is where the name is allowed to be large. The arrival is the advertisement. The driveway is the proof.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 01 THE PLAN ===================== -->
+  <article class="concept plan" id="plan">
+    <header class="opener">
+      <div>
+        <p class="label">01 · Architectural luxury</p>
+        <h2>The Plan.</h2>
+      </div>
+      <div class="meta">
+        <p>Specified, not hired. A floor-plan mark, a graphite body, a bronze jamb. The unit should look as if an architect drew it into the elevation of the house.</p>
+        <p class="muted">European. Timeless. Understated. For a £2 million home, and still dignified when the room inside is a bathroom.</p>
+      </div>
+    </header>
+
+    <div class="block">
+      <p class="label">Logo system</p>
+      <h2 style="font-size:40px">The mark is a room in plan, with the door left open.</h2>
+      <p class="narrow muted">Hairline geometry. The gap at the bottom is the entrance, not a missing piece of a cube. It engraves onto a 40mm bronze badge without falling apart. The wordmark is widely tracked, medium weight, never bold.</p>
+      <div class="logo-board" style="margin-top:28px">
+        <div class="tile primary">
+          <span class="cap">Primary</span>
+          <div class="row">
+            <svg class="mark" width="72" height="72" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            <span class="wm1">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile reversed">
+          <span class="cap">Reversed</span>
+          <div class="row">
+            <svg class="mark" width="36" height="36" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            <span class="wm1" style="font-size:14px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile horizontal">
+          <span class="cap">Horizontal</span>
+          <div class="row">
+            <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            <span class="wm1" style="font-size:16px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile compact">
+          <span class="cap">Compact</span>
+          <div class="stack center">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            <span class="wm1" style="font-size:13px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile icon">
+          <span class="cap">Icon</span>
+          <svg width="64" height="64" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+        </div>
+        <div class="tile mono">
+          <span class="cap">Single colour</span>
+          <div class="row">
+            <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="1.6"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            <span class="wm1" style="font-size:16px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile storage"><span class="cap">Storage</span><div class="stack"><span class="wm1" style="font-size:16px">BOXEDOFF</span><span class="sub1">STORAGE</span></div></div>
+        <div class="tile care"><span class="cap">Care</span><div class="stack"><span class="wm1" style="font-size:16px">BOXEDOFF</span><span class="sub1">CARE</span></div></div>
+        <div class="tile living"><span class="cap">Living</span><div class="stack"><span class="wm1" style="font-size:16px">BOXEDOFF</span><span class="sub1">LIVING</span></div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="split">
+        <div>
+          <h3>Colour</h3>
+          <div class="chips">
+            <div class="chip" style="background:#1c1b19;color:#f3f0ea"><b>Ink</b>#1C1B19</div>
+            <div class="chip" style="background:#2e2c29;color:#f3f0ea"><b>Graphite</b>#2E2C29</div>
+            <div class="chip" style="background:#8a6a45;color:#1c1b19"><b>Bronze</b>#8A6A45</div>
+            <div class="chip" style="background:#b08968;color:#1c1b19"><b>Timber</b>#B08968</div>
+            <div class="chip" style="background:#e6e0d6;color:#1c1b19"><b>Stone</b>#E6E0D6</div>
+            <div class="chip" style="background:#f7f5f2;color:#1c1b19"><b>Limestone</b>#F7F5F2</div>
+          </div>
+          <p class="muted" style="margin-top:12px">Paint the unit RAL 7021, matt. Do not “improve” it to black. Bronze is a metal plate, not a large colour field.</p>
+        </div>
+        <div class="type-row">
+          <div>
+            <h3>Wordmark</h3>
+            <p class="specimen" style="font-family:'Instrument Sans',sans-serif; font-weight:500; letter-spacing:0.28em; font-size:22px">BOXEDOFF</p>
+            <p class="muted">Suisse Int’l or GT America. Web stand-in: Instrument Sans Medium, tracking open.</p>
+          </div>
+          <div>
+            <h3>Headlines</h3>
+            <p class="specimen" style="font-family:'Instrument Serif',serif; font-size:36px">Beautiful extra space.</p>
+            <p class="muted">Instrument Serif, or a licensed grotesque if the serif ever feels too soft. Short lines. No exclamation marks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="voice">
+        <div>
+          <h3>Tone</h3>
+          <p>Precise, dry, brief. Like a specification note written by someone with manners. Never chummy. Never clinical. The brand does not explain itself twice.</p>
+          <p class="muted">Graphic system: hairline rules, wide margins, the occasional dimension line. Photography is dusk-free, overcast, architectural. No people in the launch images. The house is the context; the unit is the object.</p>
+        </div>
+        <div>
+          <h3>Headlines</h3>
+          <p class="lines" style="font-family:'Instrument Serif',serif">
+            <span>Beautiful extra space. Delivered.</span>
+            <span>Specified, not hired.</span>
+            <span>A room, for as long as you need it.</span>
+            <span style="font-family:'Instrument Sans',sans-serif; font-size:18px; letter-spacing:0.18em; margin-top:12px">NEED SPACE? BOXEDOFF.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Signature · The Bronze Jamb</h3>
+      <div class="sig">
+        <div class="plaque">
+          <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="2"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+          <span class="wm1" style="font-size:11px; color:#2a2118">BOXEDOFF</span>
+          <span style="font-size:10px; letter-spacing:0.14em">NEED ONE?</span>
+        </div>
+        <p class="narrow">A laser-etched bronze plate, about 180 × 70mm, fixed at the door jamb. Above it, one warm downlight washing the door. Beside the door, a single 800mm bay of vertical timber-effect battens. Everything else is graphite paint. Corner castings stay. Corrugation stays, quieted by matt paint. This is a paint-and-plate job, not a rebuild. Competitors can copy a logo. They cannot casually copy a bronze jamb, a timber bay and a light that makes the door look designed.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>On the driveway</h3>
+      <div class="photo-wrap">
+        <figure>
+          <img src="media/c1-driveway.jpg" alt="Graphite BoxedOff unit with a timber bay on the gravel drive of a limestone house">
+          <figcaption class="muted">Directional photograph. Production unit is a 10ft shell: matt graphite, one timber bay, bronze plate, warm downlight. No large type on the elevation.</figcaption>
+        </figure>
+        <div>
+          <svg class="elev" viewBox="0 0 520 460" width="100%" role="img" aria-label="Side elevation of the graphite unit">
+            <rect x="30" y="40" width="460" height="340" fill="#2e2c29"/>
+            <g stroke="#3a3835" stroke-width="2">
+              <path d="M50 40 V380 M70 40 V380 M90 40 V380 M110 40 V380 M130 40 V380 M150 40 V380 M250 40 V380 M270 40 V380 M290 40 V380 M310 40 V380 M330 40 V380 M350 40 V380 M370 40 V380 M390 40 V380 M410 40 V380 M430 40 V380 M450 40 V380"/>
+            </g>
+            <rect x="168" y="40" width="70" height="340" fill="#b08968"/>
+            <g stroke="#8d6b45" stroke-width="2">
+              <path d="M176 40 V380 M184 40 V380 M192 40 V380 M200 40 V380 M208 40 V380 M216 40 V380 M224 40 V380"/>
+            </g>
+            <rect x="248" y="120" width="78" height="210" fill="#262421" stroke="#1c1b19"/>
+            <rect x="278" y="150" width="6" height="70" fill="#c6a27a"/>
+            <rect x="336" y="168" width="46" height="22" fill="#8a6a45"/>
+            <circle cx="400" cy="300" r="10" fill="none" stroke="#8a6a45"/>
+            <text x="344" y="360" fill="#c6a27a" font-family="Instrument Sans, sans-serif" font-size="11" letter-spacing="2">NEED ONE?</text>
+            <rect x="30" y="40" width="16" height="16" fill="#1c1b19"/>
+            <rect x="474" y="40" width="16" height="16" fill="#1c1b19"/>
+            <rect x="30" y="364" width="16" height="16" fill="#1c1b19"/>
+            <rect x="474" y="364" width="16" height="16" fill="#1c1b19"/>
+          </svg>
+          <p class="caption muted">Public face only. Plate at eye height. QR at 28mm, low, with the URL. Timber bay is battens on the existing wall, not a new structure.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Truck, trailer, workwear</h3>
+      <div class="apps">
+        <svg viewBox="0 0 980 400" width="100%" role="img" aria-label="Graphite delivery truck">
+          <rect width="980" height="400" fill="#e7e1d6"/>
+          <line x1="40" y1="332" x2="940" y2="332" stroke="#cfc6b8"/>
+          <rect x="310" y="70" width="590" height="200" fill="#2e2c29"/>
+          <path d="M310 270 V140 H236 L190 186 H118 V270 Z" fill="#2e2c29"/>
+          <path d="M300 156 V214 H214 L186 186 H236 V156 Z" fill="#c5d0d4"/>
+          <rect x="100" y="228" width="30" height="16" fill="#1c1b19"/>
+          <circle cx="176" cy="300" r="32" fill="#1c1b19"/><circle cx="176" cy="300" r="12" fill="#8a6a45"/>
+          <circle cx="720" cy="300" r="32" fill="#1c1b19"/><circle cx="720" cy="300" r="12" fill="#8a6a45"/>
+          <circle cx="808" cy="300" r="32" fill="#1c1b19"/><circle cx="808" cy="300" r="12" fill="#8a6a45"/>
+          <g fill="#f3f0ea" font-family="Instrument Sans, sans-serif">
+            <text x="360" y="175" font-size="28" letter-spacing="8">BOXEDOFF</text>
+          </g>
+          <path d="M820 110 H860 V150 H842 M828 150 H820 V110" stroke="#c6a27a" fill="none"/>
+        </svg>
+        <svg viewBox="0 0 640 400" width="100%" role="img" aria-label="Flatbed with a graphite unit">
+          <rect width="640" height="400" fill="#e7e1d6"/>
+          <line x1="30" y1="320" x2="610" y2="320" stroke="#cfc6b8"/>
+          <rect x="90" y="230" width="460" height="16" fill="#4a4742"/>
+          <rect x="150" y="90" width="300" height="140" fill="#2e2c29"/>
+          <rect x="210" y="90" width="28" height="140" fill="#b08968"/>
+          <circle cx="180" cy="286" r="28" fill="#1c1b19"/>
+          <circle cx="470" cy="286" r="28" fill="#1c1b19"/>
+          <text x="250" y="168" fill="#f3f0ea" font-family="Instrument Sans, sans-serif" font-size="14" letter-spacing="3">BOXEDOFF</text>
+        </svg>
+      </div>
+      <div class="wear">
+        <div class="card">
+          <svg viewBox="0 0 200 220" width="140" height="154">
+            <path d="M78 36 L46 62 L56 84 L74 70 V190 H126 V70 L144 84 L154 62 L122 36 Q100 52 78 36 Z" fill="#2e2c29"/>
+            <rect x="92" y="78" width="16" height="10" fill="#8a6a45"/>
+          </svg>
+          <p class="caption">Charcoal overshirt. Bronze pin. No back print. Gallery technician, not a yard hand.</p>
+        </div>
+        <div class="card">
+          <p class="wm1" style="font-size:14px">BOXEDOFF</p>
+          <p class="caption">Trailer headboard carries the wordmark. The unit on the bed stays as quiet as it will be on the drive.</p>
+        </div>
+        <div class="card">
+          <p class="caption">Avatar and favicon</p>
+          <div class="row" style="margin-top:12px">
+            <div class="avatar" style="width:72px;height:72px;background:#2e2c29;color:#f3f0ea">
+              <svg width="36" height="36" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="2"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+            </div>
+            <div class="fav" style="width:48px;height:48px;background:#2e2c29;color:#e6e0d6">
+              <svg width="22" height="22" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="3"/><rect x="50" y="50" width="6" height="6" fill="currentColor"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Digital</h3>
+      <div class="sites">
+        <div class="browser">
+          <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>boxedoff.uk</span></div>
+          <div class="hero-ui">
+            <div class="hero-copy">
+              <div>
+                <div class="row" style="margin-bottom:28px">
+                  <svg width="18" height="18" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="2"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+                  <span class="wm1" style="font-size:12px">BOXEDOFF</span>
+                </div>
+                <h4>Beautiful extra space. Delivered.</h4>
+                <p style="font-size:14px; max-width:28ch">Premium temporary storage and living spaces, delivered to your home.</p>
+              </div>
+              <div>
+                <div class="field">
+                  <input aria-label="Postcode" placeholder="Postcode">
+                  <button class="btn" type="button">Check delivery</button>
+                </div>
+                <div class="steps"><span>Postcode</span><span>Product</span><span>Dates</span><span>Options</span><span>Book</span></div>
+              </div>
+            </div>
+            <img src="media/c1-driveway.jpg" alt="">
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-bar"><span>boxedoff.uk</span></div>
+          <img src="media/c1-driveway.jpg" alt="" style="height:160px; object-fit:cover">
+          <div class="hero-copy">
+            <h4>Beautiful extra space.</h4>
+            <p style="font-size:13px">Delivered to your home.</p>
+            <div class="field" style="flex-direction:column">
+              <input placeholder="Postcode">
+              <button class="btn" type="button">Check delivery</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="socials" style="margin-top:18px">
+        <div class="avatar" style="background:#2e2c29;color:#f3f0ea">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="2"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+        </div>
+        <div class="fav" style="background:#f7f5f2;color:#1c1b19;border:1px solid #d9d3c8">
+          <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M16 14 H64 V66 H46 M34 66 H16 V14" stroke="currentColor" stroke-width="2"/><rect x="50" y="50" width="5" height="5" fill="currentColor"/></svg>
+        </div>
+        <div class="post">
+          <p style="font-family:'Instrument Serif',serif; font-size:36px; line-height:1; margin:0">Need space?</p>
+          <p class="wm1" style="font-size:16px; margin:0">BOXEDOFF.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Why this could win</h3>
+      <p class="why">The Plan is how BoxedOff gets specified rather than hired. A bronze jamb and a graphite body belong on a drive in Alderley Edge, and they give an architect nothing to object to. It is cheap to build and easy to police: one paint, one timber bay, one plaque. Care works because nothing about the unit looks medical. The weakness is memory. From a moving car it can pass as an expensive shed. Choose it to own the top of the market. Do not choose it if strangers need to ask what it is before anyone has introduced you.</p>
+    </div>
+  </article>
+
+  <!-- ===================== 02 THE STAMP ===================== -->
+  <article class="concept stamp" id="stamp">
+    <header class="opener">
+      <div>
+        <p class="label" style="color:#e8421a">02 · Disruptive consumer</p>
+        <h2>The Stamp.</h2>
+      </div>
+      <div class="meta">
+        <p>A boring industry, interrupted. Black, a kiln-orange corner, and a wordmark heavy enough to end a sentence.</p>
+        <p class="muted">Recognisable at a hundred metres. Built for film, social and the side of a truck. Personality without jokes.</p>
+      </div>
+    </header>
+
+    <div class="block">
+      <p class="label">Logo system</p>
+      <h2 style="font-size:40px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-0.04em">The frame is open. The problem has an exit.</h2>
+      <p class="narrow muted">Three sides of a square, thick, always open at the bottom. Not a cube, not a box around the word. The wordmark is the logo. The frame is the icon, the favicon, the crop on every film end-card. It never rotates.</p>
+      <div class="logo-board" style="margin-top:28px">
+        <div class="tile primary">
+          <span class="cap">Primary</span>
+          <div class="row">
+            <svg width="64" height="64" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="12"/></svg>
+            <span class="wm2">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile reversed">
+          <span class="cap">Reversed</span>
+          <div class="stack">
+            <svg width="36" height="36" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="currentColor" stroke-width="12"/></svg>
+            <span class="wm2" style="font-size:22px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile horizontal">
+          <span class="cap">Horizontal</span>
+          <div class="row">
+            <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="12"/></svg>
+            <span class="wm2" style="font-size:22px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile compact">
+          <span class="cap">Compact</span>
+          <div class="stack center">
+            <svg width="36" height="36" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="12"/></svg>
+            <span class="wm2" style="font-size:16px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile icon">
+          <span class="cap">Icon</span>
+          <svg width="72" height="72" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="12"/></svg>
+        </div>
+        <div class="tile mono">
+          <span class="cap">Single colour</span>
+          <div class="row">
+            <svg width="28" height="28" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="currentColor" stroke-width="12"/></svg>
+            <span class="wm2" style="font-size:22px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile storage"><span class="cap">Storage</span><div class="stack"><span class="wm2" style="font-size:22px">BOXEDOFF</span><span class="sub2">STORAGE</span></div></div>
+        <div class="tile care"><span class="cap">Care</span><div class="stack"><span class="wm2" style="font-size:22px">BOXEDOFF</span><span class="sub2">CARE</span></div></div>
+        <div class="tile living"><span class="cap">Living</span><div class="stack"><span class="wm2" style="font-size:22px">BOXEDOFF</span><span class="sub2">LIVING</span></div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="split">
+        <div>
+          <h3>Colour</h3>
+          <div class="chips">
+            <div class="chip" style="background:#121212;color:#f4f0e8"><b>Ink</b>#121212</div>
+            <div class="chip" style="background:#1c1c1c;color:#f4f0e8"><b>Black</b>#1C1C1C</div>
+            <div class="chip" style="background:#e8421a;color:#121212"><b>Kiln</b>#E8421A</div>
+            <div class="chip" style="background:#9a2a10;color:#f4f0e8"><b>Kiln deep</b>#9A2A10</div>
+            <div class="chip" style="background:#f4f0e8;color:#121212"><b>Paper</b>#F4F0E8</div>
+            <div class="chip" style="background:#8a8680;color:#121212"><b>Steel</b>#8A8680</div>
+          </div>
+          <p class="muted" style="margin-top:12px">Kiln is a custom red-orange. Do not substitute RAL 2009 traffic orange or any high-visibility yellow. Paint the body RAL 9005 matt.</p>
+        </div>
+        <div>
+          <h3>Typography</h3>
+          <p class="specimen" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-0.045em">BOXEDOFF</p>
+          <p class="muted">Commercial: Druk or Obviously, extra bold. Web and social: Bricolage Grotesque ExtraBold. Tight tracking. The answer-line is always two lines, the brand name second, with a full stop.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="voice">
+        <div>
+          <h3>Tone</h3>
+          <p>Blunt, warm underneath, never cute. Writes the way a competent friend texts. No puns about thinking outside the box. The name is the punchline, so the line before it stays ordinary.</p>
+          <p class="muted">Graphic system: the open frame crops photography and ends every film. Posters are mostly type. One colour besides black and paper. Social is native to the brand, not a shrunk website.</p>
+        </div>
+        <div>
+          <h3>Headlines</h3>
+          <p class="lines" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-0.04em">
+            <span>Need space?</span>
+            <span style="color:#e8421a">BOXEDOFF.</span>
+            <span>Renovating?</span>
+            <span style="color:#e8421a">BOXEDOFF.</span>
+            <span>Bathroom downstairs?</span>
+            <span style="color:#e8421a">BOXEDOFF.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Signature · The Kiln Corner</h3>
+      <div class="sig">
+        <div class="plaque">
+          <svg width="36" height="36" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#121212" stroke-width="12"/></svg>
+        </div>
+        <p class="narrow">A 140mm stripe, full height, on the corner that faces the road. Vinyl or a masked paint edge. The open frame sits near the top, reversed out of the stripe. At the bottom, in small type: NEED ONE? plus a QR and boxedoff.uk. At dusk a small graze light catches the stripe so the corner glows. The rest of the unit is bare black. Large type is forbidden on the customer’s elevation. It is mandatory on the truck.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>On the driveway</h3>
+      <div class="photo-wrap">
+        <figure>
+          <img src="media/c2-driveway.jpg" alt="Black unit with a kiln-orange stripe outside a modern house at dusk">
+          <figcaption class="muted">Directional photograph. Production art moves the stripe to the leading corner and uses the open frame, not a closed square. Still just paint and a stripe.</figcaption>
+        </figure>
+        <div>
+          <svg class="elev" viewBox="0 0 520 460" width="100%" role="img" aria-label="Side elevation of the black unit">
+            <rect x="30" y="40" width="460" height="340" fill="#141414"/>
+            <g stroke="#242424" stroke-width="3">
+              <path d="M60 40 V380 M90 40 V380 M120 40 V380 M150 40 V380 M180 40 V380 M210 40 V380 M240 40 V380 M270 40 V380 M300 40 V380 M330 40 V380 M360 40 V380 M390 40 V380 M420 40 V380 M450 40 V380"/>
+            </g>
+            <rect x="30" y="40" width="22" height="340" fill="#e8421a"/>
+            <path d="M41 78 V58 H55 V78" stroke="#121212" stroke-width="4" fill="none"/>
+            <text x="70" y="350" fill="#f4f0e8" font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="700">NEED ONE?</text>
+            <rect x="168" y="330" width="22" height="22" fill="none" stroke="#f4f0e8"/>
+            <rect x="30" y="40" width="14" height="14" fill="#0c0c0c"/>
+            <rect x="476" y="40" width="14" height="14" fill="#0c0c0c"/>
+            <rect x="30" y="366" width="14" height="14" fill="#0c0c0c"/>
+            <rect x="476" y="366" width="14" height="14" fill="#0c0c0c"/>
+          </svg>
+          <p class="caption muted">The stripe is the advertisement. The words are a whisper at the base. Solid door for storage. Same shell, narrower stripe, for care.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Truck, trailer, workwear</h3>
+      <div class="apps">
+        <svg viewBox="0 0 980 400" width="100%" role="img" aria-label="Black truck with kiln frame">
+          <rect width="980" height="400" fill="#1c1c1c"/>
+          <line x1="40" y1="332" x2="940" y2="332" stroke="#2a2a2a"/>
+          <rect x="310" y="70" width="590" height="200" fill="#121212"/>
+          <path d="M310 270 V140 H236 L190 186 H118 V270 Z" fill="#121212"/>
+          <path d="M300 156 V214 H214 L186 186 H236 V156 Z" fill="#d7dde0"/>
+          <rect x="700" y="70" width="200" height="200" fill="#e8421a"/>
+          <path d="M730 230 V110 H860 V230" stroke="#121212" stroke-width="18" fill="none"/>
+          <text x="340" y="185" fill="#f4f0e8" font-family="Bricolage Grotesque, sans-serif" font-size="42" font-weight="800">BOXEDOFF</text>
+          <circle cx="176" cy="300" r="32" fill="#0a0a0a"/>
+          <circle cx="720" cy="300" r="32" fill="#0a0a0a"/>
+          <circle cx="808" cy="300" r="32" fill="#0a0a0a"/>
+        </svg>
+        <svg viewBox="0 0 640 400" width="100%" role="img" aria-label="Flatbed carrying a black unit">
+          <rect width="640" height="400" fill="#1c1c1c"/>
+          <rect x="80" y="240" width="480" height="14" fill="#2a2a2a"/>
+          <rect x="160" y="100" width="300" height="140" fill="#121212"/>
+          <rect x="160" y="100" width="16" height="140" fill="#e8421a"/>
+          <circle cx="190" cy="290" r="26" fill="#0a0a0a"/>
+          <circle cx="470" cy="290" r="26" fill="#0a0a0a"/>
+          <text x="200" y="175" fill="#f4f0e8" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22">BOXEDOFF</text>
+        </svg>
+      </div>
+      <div class="wear">
+        <div class="card">
+          <svg viewBox="0 0 200 220" width="140">
+            <path d="M78 36 L46 62 L56 84 L74 70 V190 H126 V70 L144 84 L154 62 L122 36 Q100 52 78 36 Z" fill="#121212"/>
+            <path d="M96 86 V74 H112 V86" stroke="#e8421a" stroke-width="4" fill="none"/>
+          </svg>
+          <p class="caption">Black jacket. Kiln frame on the chest, 30mm. BOXEDOFF across the upper back. The person can be louder than the unit.</p>
+        </div>
+        <div class="card">
+          <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:28px; margin:0">BOXEDOFF</p>
+          <p class="caption">Back print is for the yard and the truck. On a customer’s drive, jackets stay zipped and quiet if the job is care.</p>
+        </div>
+        <div class="card">
+          <p class="caption">Avatar and favicon. Kiln frame on ink. Nothing else.</p>
+          <div class="row" style="margin-top:12px">
+            <div class="avatar" style="width:72px;height:72px;background:#e8421a">
+              <svg width="40" height="40" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#121212" stroke-width="12"/></svg>
+            </div>
+            <div class="fav" style="width:48px;height:48px;background:#121212">
+              <svg width="26" height="26" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="14"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Digital</h3>
+      <div class="sites">
+        <div class="browser">
+          <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>boxedoff.uk</span></div>
+          <div class="hero-ui">
+            <div class="hero-copy">
+              <div>
+                <span class="wm2" style="font-size:14px">BOXEDOFF</span>
+                <h4 style="margin-top:24px">Need space?<br><span style="color:#e8421a">BOXEDOFF.</span></h4>
+                <p style="font-size:14px; max-width:28ch">Premium temporary storage and living spaces, delivered to your home.</p>
+              </div>
+              <div>
+                <div class="field">
+                  <input placeholder="Postcode" style="border-bottom-color:#f4f0e8">
+                  <button class="btn" type="button">Go</button>
+                </div>
+                <div class="steps"><span>Postcode</span><span>Product</span><span>Dates</span><span>Options</span><span>Book</span></div>
+              </div>
+            </div>
+            <img src="media/c2-driveway.jpg" alt="">
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-bar"><span>boxedoff.uk</span></div>
+          <div class="hero-copy">
+            <h4>Need space?<br><span style="color:#e8421a">BOXEDOFF.</span></h4>
+            <p style="font-size:13px">Delivered to your home.</p>
+            <div class="field" style="flex-direction:column">
+              <input placeholder="Postcode">
+              <button class="btn" type="button">Go</button>
+            </div>
+          </div>
+          <img src="media/c2-driveway.jpg" alt="" style="height:140px; object-fit:cover">
+        </div>
+      </div>
+      <div class="socials" style="margin-top:18px">
+        <div class="avatar" style="background:#e8421a">
+          <svg width="42" height="42" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#121212" stroke-width="12"/></svg>
+        </div>
+        <div class="fav" style="background:#121212; border:1px solid #333">
+          <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><path d="M14 66 V14 H66 V66" stroke="#e8421a" stroke-width="14"/></svg>
+        </div>
+        <div class="post">
+          <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:42px; line-height:0.9; letter-spacing:-0.04em; margin:0">Renovating?</p>
+          <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:42px; margin:0">BOXEDOFF.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Why this could win</h3>
+      <p class="why">The Stamp is built to be noticed. A kiln corner is visible at a hundred metres, cheap for a franchisee to apply, and difficult to water down. The answer-line is a poster, a social post and a fifteen-second film, all at once. This is the fastest route to a national storage brand. It is also the hardest fit for someone coming home from hospital. Care can borrow the wordmark and quieten the colour, but the master brand will still feel loud in front of an insurer. Choose it if fame in storage matters more than an easy care pathway.</p>
+    </div>
+  </article>
+
+  <!-- ===================== 03 THE THRESHOLD ===================== -->
+  <article class="concept threshold" id="threshold">
+    <header class="opener">
+      <div>
+        <p class="label">03 · Warm premium living</p>
+        <h2 style="font-family:'Fraunces',serif">The Threshold.</h2>
+      </div>
+      <div class="meta">
+        <p>A brand about coming in, not about boxes. The same object has to look right on an expensive drive and right when someone cannot use the bathroom upstairs.</p>
+        <p class="muted">Warm, calm, human. Natural materials. No healthcare blue, no crosses, no institutional greys.</p>
+      </div>
+    </header>
+
+    <div class="block">
+      <p class="label">Logo system</p>
+      <h2 style="font-family:'Fraunces',serif; font-size:40px">A doorway, open at the floor.</h2>
+      <p class="narrow muted">The mark is the proportion of a door, not a crate. Two jambs, a lintel, a ground line. You can walk through it. That idea covers storage, a temporary bathroom, and whatever Living becomes. The wordmark stays BOXEDOFF, set more gently than The Stamp and less cold than The Plan.</p>
+      <div class="logo-board" style="margin-top:28px">
+        <div class="tile primary">
+          <span class="cap">Primary</span>
+          <div class="row">
+            <svg width="46" height="72" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="wm3">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile reversed">
+          <span class="cap">Reversed</span>
+          <div class="row">
+            <svg width="28" height="44" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="wm3" style="font-size:14px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile horizontal">
+          <span class="cap">Horizontal</span>
+          <div class="row">
+            <svg width="22" height="36" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3.5"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="wm3" style="font-size:16px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile compact">
+          <span class="cap">Compact</span>
+          <div class="stack center">
+            <svg width="22" height="34" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3.5"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="wm3" style="font-size:12px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile icon">
+          <span class="cap">Icon</span>
+          <svg width="52" height="80" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="tile mono">
+          <span class="cap">Single colour</span>
+          <div class="row">
+            <svg width="22" height="36" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="3.5"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="wm3" style="font-size:16px">BOXEDOFF</span>
+          </div>
+        </div>
+        <div class="tile storage"><span class="cap">Storage</span><div class="stack"><span class="wm3" style="font-size:16px">BOXEDOFF</span><span class="sub3 storage">STORAGE</span></div></div>
+        <div class="tile care"><span class="cap">Care</span><div class="stack"><span class="wm3" style="font-size:16px">BOXEDOFF</span><span class="sub3 care">CARE</span></div></div>
+        <div class="tile living"><span class="cap">Living</span><div class="stack"><span class="wm3" style="font-size:16px">BOXEDOFF</span><span class="sub3 living">LIVING</span></div></div>
+      </div>
+      <p class="muted" style="margin-top:12px">Division words can take a quiet colour: bark for Storage, olive for Care, terracotta for Living. The master mark never changes colour with the offer. If a franchisee cannot keep that subtle, set every division in charcoal.</p>
+    </div>
+
+    <div class="block">
+      <div class="split">
+        <div>
+          <h3>Colour</h3>
+          <div class="chips">
+            <div class="chip" style="background:#2a2724;color:#f3eee6"><b>Charcoal</b>#2A2724</div>
+            <div class="chip" style="background:#4a4038;color:#f3eee6"><b>Bark</b>#4A4038</div>
+            <div class="chip" style="background:#c4a07a;color:#2a2724"><b>Clay</b>#C4A07A</div>
+            <div class="chip" style="background:#c6a56a;color:#2a2724"><b>Bamboo</b>#C6A56A</div>
+            <div class="chip" style="background:#6e7d62;color:#f3eee6"><b>Sage</b>#6E7D62</div>
+            <div class="chip" style="background:#3c4334;color:#f3eee6"><b>Olive</b>#3C4334</div>
+          </div>
+          <p class="muted" style="margin-top:12px">Body colour is a warm greige, custom mixed. Do not use container grey. Cream ground for print is #F3EEE6. Olive is the digital action colour.</p>
+        </div>
+        <div class="type-row">
+          <div>
+            <h3>Wordmark</h3>
+            <p class="specimen" style="font-family:Outfit,sans-serif; font-weight:500; letter-spacing:0.18em; font-size:22px">BOXEDOFF</p>
+            <p class="muted">Söhne or Untitled Sans. Web: Outfit Medium. Humanist, open, never extra-bold.</p>
+          </div>
+          <div>
+            <h3>Headlines</h3>
+            <p class="specimen" style="font-family:Fraunces,serif; font-weight:500; font-size:34px">A little more room. For now.</p>
+            <p class="muted">Canela, Tiempos, or Fraunces on the web. Sentence case. The serif does the warmth so the logo can stay a clean sans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="voice">
+        <div>
+          <h3>Tone</h3>
+          <p>Unhurried, plain English, second person. Never “patients”, never “users”, never pity. Families, solicitors and occupational therapists get the same voice. The care offer is described as a bathroom you can come home to, not a welfare unit.</p>
+          <p class="muted">Photography: morning light, hands, doorways, ordinary clothes. A referrer looks like a guest, not a clinician. No gowns, no scrubs, no ramps that read as equipment. Material close-ups of bamboo, clay and wool are part of the system.</p>
+        </div>
+        <div>
+          <h3>Headlines</h3>
+          <p class="lines" style="font-family:Fraunces,serif; font-weight:500; font-size:26px">
+            <span>Beautiful extra space. Delivered.</span>
+            <span>More room, for as long as you need it.</span>
+            <span>A bathroom you can come home to.</span>
+            <span style="font-family:Outfit,sans-serif; font-size:16px; letter-spacing:0.14em; margin-top:14px">NEED SOME SPACE? BOXEDOFF.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Signature · The Bamboo Bay</h3>
+      <div class="sig">
+        <div class="plaque">
+          <svg width="28" height="44" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="#2a2724" stroke-width="3"/><path d="M4 80 H52" stroke="#2a2724" stroke-width="2"/></svg>
+          <span class="wm3" style="font-size:11px">BOXEDOFF</span>
+        </div>
+        <p class="narrow">A 600mm bay of bamboo-effect composite slats, full height, fixed to battens on the existing wall. A warm 2700K light hidden in the rebate, so the bay glows after dark. An oak bar as the handle people actually touch; locking bars painted charcoal so they disappear. The plate is small, dark, and says “Need some space?” with a QR. Storage gets a solid door. Care and Living get a glazed personnel door, so a bathroom has daylight. Same shell either way. This is the detail a neighbour recognises, and the detail a competitor cannot fake with a sticker.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>On the driveway, and at a homecoming</h3>
+      <div class="photo-wrap">
+        <figure>
+          <img src="media/c3-driveway.jpg" alt="Warm stone unit with a bamboo bay beside a brick house and wisteria">
+          <figcaption class="muted">Storage. Street face in warm composite panels or a thick masonry paint, one bamboo bay, solid door. Ends can stay painted steel. A cladding kit, not a structural rebuild.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/c3-care.jpg" alt="A woman in everyday clothes walking toward a warm temporary room at home">
+          <figcaption class="muted">Care and Living. Same body, same bay, glazed door, a short timber step. It should feel like a garden room that happens to be a bathroom.</figcaption>
+        </figure>
+      </div>
+      <svg class="elev" viewBox="0 0 980 360" width="100%" style="margin-top:18px" role="img" aria-label="Elevations for storage and care">
+        <rect width="980" height="360" fill="#e7dfd4"/>
+        <g>
+          <rect x="40" y="40" width="420" height="250" fill="#cfc4b4"/>
+          <g stroke="#c4b59f"><path d="M60 40 V290 M80 40 V290 M100 40 V290 M120 40 V290 M220 40 V290 M240 40 V290 M260 40 V290 M280 40 V290 M300 40 V290 M320 40 V290 M340 40 V290 M360 40 V290 M380 40 V290 M400 40 V290 M420 40 V290"/></g>
+          <rect x="130" y="40" width="70" height="250" fill="#c6a56a"/>
+          <g stroke="#a88848"><path d="M140 40 V290 M150 40 V290 M160 40 V290 M170 40 V290 M180 40 V290 M190 40 V290"/></g>
+          <rect x="210" y="90" width="70" height="160" fill="#2a2724"/>
+          <rect x="236" y="140" width="18" height="6" fill="#c6a56a"/>
+          <text x="40" y="330" fill="#4a4038" font-family="Outfit, sans-serif" font-size="14" letter-spacing="2">STORAGE · SOLID DOOR</text>
+        </g>
+        <g>
+          <rect x="520" y="40" width="420" height="250" fill="#cfc4b4"/>
+          <rect x="610" y="40" width="70" height="250" fill="#c6a56a"/>
+          <g stroke="#a88848"><path d="M620 40 V290 M630 40 V290 M640 40 V290 M650 40 V290 M660 40 V290 M670 40 V290"/></g>
+          <rect x="700" y="80" width="78" height="175" fill="#3a4448"/>
+          <rect x="708" y="88" width="62" height="140" fill="#d5e0e4"/>
+          <text x="520" y="330" fill="#4a4038" font-family="Outfit, sans-serif" font-size="14" letter-spacing="2">CARE · GLAZED DOOR</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="block">
+      <h3>Truck, trailer, workwear</h3>
+      <div class="apps">
+        <svg viewBox="0 0 980 400" width="100%" role="img" aria-label="Stone coloured delivery truck">
+          <rect width="980" height="400" fill="#f3eee6"/>
+          <line x1="40" y1="332" x2="940" y2="332" stroke="#ddd4c6"/>
+          <rect x="310" y="78" width="590" height="192" fill="#cfc4b4"/>
+          <rect x="310" y="230" width="590" height="40" fill="#c6a56a"/>
+          <path d="M310 270 V148 H236 L190 190 H118 V270 Z" fill="#4a4038"/>
+          <path d="M300 164 V214 H214 L188 190 H236 V164 Z" fill="#d5e0e4"/>
+          <text x="360" y="175" fill="#2a2724" font-family="Outfit, sans-serif" font-size="26" letter-spacing="6">BOXEDOFF</text>
+          <path d="M820 120 V168 M820 120 H844 V168" stroke="#2a2724" stroke-width="3" fill="none"/>
+          <path d="M808 168 H856" stroke="#2a2724" stroke-width="2"/>
+          <circle cx="176" cy="304" r="32" fill="#2a2724"/>
+          <circle cx="730" cy="304" r="32" fill="#2a2724"/>
+          <circle cx="816" cy="304" r="32" fill="#2a2724"/>
+        </svg>
+        <svg viewBox="0 0 640 400" width="100%" role="img" aria-label="Flatbed with a stone unit">
+          <rect width="640" height="400" fill="#f3eee6"/>
+          <rect x="80" y="236" width="480" height="14" fill="#4a4038"/>
+          <rect x="160" y="96" width="300" height="140" fill="#cfc4b4"/>
+          <rect x="200" y="96" width="36" height="140" fill="#c6a56a"/>
+          <circle cx="190" cy="286" r="26" fill="#2a2724"/>
+          <circle cx="470" cy="286" r="26" fill="#2a2724"/>
+          <text x="260" y="175" fill="#2a2724" font-family="Outfit, sans-serif" font-size="14" letter-spacing="2">BOXEDOFF</text>
+        </svg>
+      </div>
+      <div class="wear">
+        <div class="card">
+          <svg viewBox="0 0 200 220" width="140">
+            <path d="M78 36 L46 62 L56 84 L74 70 V190 H126 V70 L144 84 L154 62 L122 36 Q100 52 78 36 Z" fill="#cfc4b4"/>
+            <path d="M96 92 V78 H108 V92" stroke="#2a2724" stroke-width="2" fill="none"/>
+            <path d="M92 92 H112" stroke="#2a2724" stroke-width="1.5"/>
+          </svg>
+          <p class="caption">Stone chore coat. Doorway embroidered at 22mm. Looks like a good joinery firm, which is the point.</p>
+        </div>
+        <div class="card">
+          <p style="font-family:Fraunces,serif; font-size:26px; margin:0">Beautiful extra space.</p>
+          <p class="caption">The only line on the truck, under the wordmark. No franchisee name. No town.</p>
+        </div>
+        <div class="card">
+          <p class="caption">Avatar and favicon</p>
+          <div class="row" style="margin-top:12px">
+            <div class="avatar" style="width:72px;height:72px;background:#3c4334;color:#f3eee6">
+              <svg width="28" height="44" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="4"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="fav" style="width:48px;height:48px;background:#f3eee6;color:#2a2724;border:1px solid #ddd4c6">
+              <svg width="18" height="28" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="5"/><path d="M4 80 H52" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Digital</h3>
+      <div class="sites">
+        <div class="browser">
+          <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>boxedoff.uk</span></div>
+          <div class="hero-ui">
+            <div class="hero-copy">
+              <div>
+                <span class="wm3" style="font-size:12px">BOXEDOFF</span>
+                <h4 style="margin-top:20px">Beautiful extra space. Delivered.</h4>
+                <p style="font-size:14px; max-width:32ch">Premium temporary storage and living spaces, delivered directly to your home.</p>
+              </div>
+              <div>
+                <div class="field">
+                  <input placeholder="Postcode">
+                  <button class="btn" type="button">See dates</button>
+                </div>
+                <p style="font-size:13px; margin-top:10px; text-decoration:underline">I’m arranging this for someone else</p>
+                <div class="steps"><span>Postcode</span><span>Product</span><span>Dates</span><span>Options</span><span>Book</span></div>
+              </div>
+            </div>
+            <img src="media/c3-driveway.jpg" alt="">
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-bar"><span>boxedoff.uk</span></div>
+          <img src="media/c3-care.jpg" alt="" style="height:150px; object-fit:cover">
+          <div class="hero-copy">
+            <h4 style="font-size:28px">Beautiful extra space.</h4>
+            <p style="font-size:13px">Delivered to your door.</p>
+            <div class="field" style="flex-direction:column">
+              <input placeholder="Postcode">
+              <button class="btn" type="button">See dates</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="socials" style="margin-top:18px">
+        <div class="avatar" style="background:#3c4334;color:#f3eee6">
+          <svg width="32" height="50" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="4"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="fav" style="background:#f3eee6;color:#2a2724;border:1px solid #ddd4c6">
+          <svg width="22" height="34" viewBox="0 0 56 88" fill="none"><path d="M10 80 V12 H46 V80" stroke="currentColor" stroke-width="4"/><path d="M4 80 H52" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="post">
+          <p style="font-family:Fraunces,serif; font-size:32px; line-height:1.1; margin:0">A bathroom you can come home to.</p>
+          <p class="wm3" style="font-size:14px; margin:0">BOXEDOFF</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Why this could win</h3>
+      <p class="why">The Threshold is the only direction native to both products. Stone, a bamboo bay and a doorway look considered on a Cheshire drive, and like hospitality rather than welfare when the room is a bathroom. Solicitors, therapists and neighbours can all be shown the same picture. The mark means entry, not storage, so Care and Living do not need a rebrand. Franchisees inherit a material recipe. It will not shout like The Stamp. It earns “what’s that?” and then “that’s actually nice”, which is the reaction this business is built on.</p>
+    </div>
+  </article>
+
+  <section id="compare">
+    <p class="label">Side by side</p>
+    <h2>What each one is for.</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>The Plan</th><th>The Stamp</th><th>The Threshold</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Driveway</td><td>Quiet admiration</td><td>Instant recognition</td><td>Warmth, then curiosity</td></tr>
+        <tr><td>At 100 metres</td><td>Easy to miss</td><td>Unmissable</td><td>The material reads first</td></tr>
+        <tr><td>Storage launch</td><td>Strong, if specified</td><td>Strongest</td><td>Strong</td></tr>
+        <tr><td>Care and Living</td><td>Dignified, slightly cold</td><td>Needs softening</td><td>Native</td></tr>
+        <tr><td>Franchise control</td><td>Paint, bay, plaque</td><td>Easiest: one stripe</td><td>Paint, bay, door, plate</td></tr>
+        <tr><td>National, not local</td><td>Yes, as a niche house brand</td><td>Yes, as a consumer brand</td><td>Yes, as a home brand</td></tr>
+        <tr><td>Signature</td><td>Bronze jamb</td><td>Kiln corner</td><td>Bamboo bay</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="rec" id="recommend">
+    <p class="label">Recommendation</p>
+    <h2>Build The Threshold.</h2>
+    <div class="split">
+      <div>
+        <p>BoxedOff has to be desirable on an expensive driveway and appropriate for a fragile week at home. Those are not two brands. They are the same object, seen by a neighbour and by a case manager.</p>
+        <p>The Plan can do the driveway, and it can do care without causing offence, but it is easy to forget and easy to mistake for a garden building. The Stamp will be remembered, and it can build a national storage business quickly, but every care conversation starts with an apology for how loud the brand is. Trust is the harder thing to add later. Fame can be turned up on the truck, in film, and in the answer-line without painting the customer’s unit kiln orange.</p>
+        <p>The Threshold lets storage launch the company and lets Care and Living extend it without a new identity. The doorway is not a storage symbol, so the master brand does not have to be redesigned when the second product becomes half the business. Franchisees can be handed a short manual: warm greige shell, one bamboo bay, oak handle, olive and charcoal only, BOXEDOFF in one word, no town on the truck. That is enough to look like the same company in Knutsford and, later, in any other town.</p>
+        <p>Keep the answer-line. It belongs to the name, not only to The Stamp. Need space? BOXEDOFF. Say it calmly.</p>
+      </div>
+      <div>
+        <h3>Lock these first</h3>
+        <ul class="rule-list">
+          <li><strong>Wordmark</strong> BOXEDOFF. One word. Capitals. Outfit or Söhne, medium, open tracking.</li>
+          <li><strong>Mark</strong> The doorway with a ground line. Open at the floor. Never a cube.</li>
+          <li><strong>Body</strong> Custom warm greige. Not container grey, not black.</li>
+          <li><strong>Signature</strong> 600mm bamboo bay, warm graze light, small plate: “Need some space?”</li>
+          <li><strong>Doors</strong> Solid for Storage. Glazed for Care and Living. Same shell.</li>
+          <li><strong>Voice</strong> Plain, warm, no pity, no clinic. One site. A quiet path for people arranging it for someone else.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
