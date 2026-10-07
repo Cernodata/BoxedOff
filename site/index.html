@@ -16,10 +16,10 @@
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#121212">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" as="image" href="../brand/media/bamboo-unit.jpg?v=qr">
+<link rel="icon" href="/site/favicon.ico" sizes="any">
+<link rel="icon" href="/site/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/site/apple-touch-icon.png">
+<link rel="preload" as="image" href="/brand/media/bamboo-unit.jpg?v=qr">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
@@ -393,7 +393,7 @@
       <p class="fine" id="hero-status" aria-live="polite">From £50 a week. Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.</p>
     </div>
     <figure class="hero-photo">
-      <img src="../brand/media/bamboo-unit.jpg?v=qr" width="1280" height="720" alt="A black 10ft storage container for hire, with one bamboo bay and an orange corner, on a driveway">
+      <img src="/brand/media/bamboo-unit.jpg?v=qr" width="1280" height="720" alt="A black 10ft storage container for hire, with one bamboo bay and an orange corner, on a driveway">
     </figure>
   </section>
 
@@ -498,7 +498,7 @@
   <section id="unit">
     <div class="wrap split">
       <figure>
-        <img src="../brand/media/bamboo-unit.jpg?v=qr" width="1280" height="720" alt="Painted steel 10ft storage container with a solid door and one bamboo bay">
+        <img src="/brand/media/bamboo-unit.jpg?v=qr" width="1280" height="720" alt="Painted steel 10ft storage container with a solid door and one bamboo bay">
       </figure>
       <div>
         <p class="kicker">The product</p>
@@ -720,7 +720,7 @@ async function lookup(raw) {
   state.area = { state: "checking" };
   render();
   try {
-    const res = await fetch("https://api.postcodes.io/postcodes/" + s);
+    const res = await fetch("https://api.postcodes.io/postcodes/" + encodeURIComponent(s));
     if (seq !== lookupSeq) return;
     if (res.status === 404) {
       state.area = { state: "bad" };

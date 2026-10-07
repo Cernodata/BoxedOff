@@ -1,5 +1,9 @@
 # BoxedOff
 
+## 2026-10-07 — Vercel and security
+
+`vercel.json`: `/` → `site/index.html`, SEO files and favicons rewritten, `/site` redirects to `/`. Security headers include HSTS, CSP (fonts + Postcodes.io only), `X-Frame-Options: DENY`, nosniff. `.vercelignore` drops `memory.md` from deploy. Site assets use root paths `/brand/...` and `/site/...`.
+
 ## 2026-10-07 — GitHub
 
 Repository: https://github.com/Cernodata/BoxedOff (public). `README.md` and `.gitignore` at repo root. Push with `git -c safe.directory=W:/Cursor/BoxedOff push` if on the W: drive.
