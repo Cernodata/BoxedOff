@@ -2,7 +2,7 @@
 
 ## 2026-10-07 — Vercel and security
 
-`vercel.json`: `/` → `site/index.html`, SEO files and favicons rewritten, `/site` redirects to `/`. Security headers include HSTS, CSP (fonts + Postcodes.io only), `X-Frame-Options: DENY`, nosniff. `.vercelignore` drops `memory.md` from deploy. Site assets use root paths `/brand/...` and `/site/...`.
+Vercel runs `npm run build` → `dist/` with `index.html` at the deploy root plus `brand/`. Do not set dashboard Output Directory to `site`. `/site/*` redirects to `/`. Security headers in `vercel.json`. `.vercelignore` drops `memory.md`.
 
 ## 2026-10-07 — GitHub
 

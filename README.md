@@ -29,8 +29,9 @@ Canonical domain (when live): `https://boxedoff.uk/`
 ## Deploy on Vercel
 
 1. Import **https://github.com/Cernodata/BoxedOff** in [Vercel](https://vercel.com/new).
-2. Leave **Framework Preset** as Other (static). No build command. Output directory is the repo root.
-3. Add domain **boxedoff.uk** in Project → Settings → Domains.
-4. Deploy. The homepage is served at `/` (rewritten from `site/index.html`). Brand book stays at `/brand/`.
+2. **Framework Preset:** Other. Build command and output directory come from `vercel.json` (`npm run build` → `dist/`).
+3. In Project → Settings → General, leave **Root Directory** blank. If **Output Directory** is set in the dashboard, clear it so `vercel.json` wins.
+4. Add domain **boxedoff.uk**, then redeploy.
+5. Homepage is `/`. Brand book is `/brand/`.
 
 Security: `vercel.json` sets HSTS, CSP, frame denial, and nosniff. Postcode lookup calls **Postcodes.io** over HTTPS only. No API keys in the repo. `memory.md` is excluded from deploy via `.vercelignore`.

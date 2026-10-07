@@ -8,3 +8,4 @@ __pycache__/
 Thumbs.db
 *.log
 site/_seo_*.json
+dist/

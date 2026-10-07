@@ -1,20 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "cleanUrls": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/site/index.html" },
-    { "source": "/robots.txt", "destination": "/site/robots.txt" },
-    { "source": "/sitemap.xml", "destination": "/site/sitemap.xml" },
-    { "source": "/favicon.ico", "destination": "/site/favicon.ico" },
-    { "source": "/favicon.svg", "destination": "/site/favicon.svg" },
-    { "source": "/apple-touch-icon.png", "destination": "/site/apple-touch-icon.png" }
-  ],
   "redirects": [
     { "source": "/site", "destination": "/", "permanent": true },
     { "source": "/site/", "destination": "/", "permanent": true },
-    { "source": "/site/index.html", "destination": "/", "permanent": true }
+    { "source": "/site/:path*", "destination": "/:path*", "permanent": true }
   ],
   "headers": [
     {
