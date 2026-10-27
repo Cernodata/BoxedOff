@@ -418,12 +418,13 @@
   .close p { margin: 16px 0 0; }
   .close a:not(.btn) { color: #f8f8f8; font-size: 28px; font-weight: 700; letter-spacing: -0.03em; text-decoration: none; }
   .close a:not(.btn):hover { color: var(--kiln); }
+  .close a.mail { font-size: 16px; font-weight: 500; letter-spacing: 0; }
   footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
   .foot { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 28px; align-items: start; }
   footer strong { display: block; margin-bottom: 8px; color: var(--ink); font-family: var(--sans); font-weight: 700; letter-spacing: 0.08em; font-size: 16px; text-transform: uppercase; }
   footer nav { display: flex; flex-direction: column; gap: 8px; }
   footer a { color: inherit; text-decoration: none; }
-  footer a.phone { color: var(--ink); font-weight: 700; }
+  footer a.phone, footer a.mail { color: var(--ink); font-weight: 700; }
   footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
   footer p { margin: 0; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -467,7 +468,7 @@
       "url": "https://boxedoff.uk/",
       "description": "A secure 10ft cube, delivered to your door and collected at the end. You don't drive to a lock-up. Delivery and collection are free.",
       "areaServed": ["Knutsford", "Alderley Edge", "Wilmslow", "Holmes Chapel"],
-      "provider": { "@type": "Organization", "name": "Cube Drop Limited", "url": "https://boxedoff.uk/", "telephone": "+441565662244" },
+      "provider": { "@type": "Organization", "name": "Cube Drop Limited", "url": "https://boxedoff.uk/", "telephone": "+441565662244", "email": "drop@cubedrop.co.uk" },
       "offers": {
         "@type": "Offer",
         "price": "100",
@@ -480,6 +481,7 @@
       "name": "Cube Drop Limited",
       "url": "https://boxedoff.uk/",
       "telephone": "+441565662244",
+      "email": "drop@cubedrop.co.uk",
       "image": "https://boxedoff.uk/brand/media/cube-hero.jpg",
       "priceRange": "£100 a week",
       "areaServed": ["Knutsford", "Alderley Edge", "Wilmslow", "Holmes Chapel"]
@@ -617,7 +619,7 @@
           <p class="post-feedback-detail" id="hero-feedback-detail"></p>
         </div>
       </div>
-      <p class="fine hero-call">Or call <a href="tel:+441565662244">01565 662244</a></p>
+      <p class="fine hero-call">Or call <a href="tel:+441565662244">01565 662244</a><br>or <a href="mailto:drop@cubedrop.co.uk">drop@cubedrop.co.uk</a></p>
       <p class="fine" id="hero-hint">Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.</p>
     </div>
     <figure class="hero-photo">
@@ -927,6 +929,7 @@
       <p class="kicker" style="color:#ff7a00">When you’re ready.</p>
       <h2>Check the postcode. Or call.</h2>
       <p><a href="tel:+441565662244">01565 662244</a></p>
+      <p><a class="mail" href="mailto:drop@cubedrop.co.uk">drop@cubedrop.co.uk</a></p>
       <a class="btn" href="#book">Check delivery</a>
     </div>
   </section>
@@ -938,6 +941,7 @@
       <strong>Cube Drop Limited</strong>
       <p>Storage to you. The cube comes to the drive. You don’t.</p>
       <p><a class="phone" href="tel:+441565662244">01565 662244</a></p>
+      <p><a class="mail" href="mailto:drop@cubedrop.co.uk">drop@cubedrop.co.uk</a></p>
     </div>
     <nav aria-label="On this page">
       <a href="#uses">Uses</a>

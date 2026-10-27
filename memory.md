@@ -1,3 +1,7 @@
+## 2026-10-27 — Email
+
+The public address is drop@cubedrop.co.uk. It sits under the phone in the hero, the close, and the footer, and on the LocalBusiness details.
+
 ## 2026-10-27 — TM on the site logo
 
 The nav wordmark now reads CUBE DROP with a small TM, same as the brand lockup. The company name in the footer stays Cube Drop Limited.
