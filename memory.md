@@ -1,3 +1,15 @@
+## 2026-10-27 — TM on the site logo
+
+The nav wordmark now reads CUBE DROP with a small TM, same as the brand lockup. The company name in the footer stays Cube Drop Limited.
+
+## 2026-10-27 — How much the cube holds
+
+The FAQ now says the cube is about 2.6 metres high and holds about 16 cubic metres inside: a one-bedroom flat, not a whole house. The cube section says the same.
+
+## 2026-10-27 — Headline says what it is
+
+The hero H1 is now “A storage cube, at your door.” The line under it names the secure 10ft cube, delivery and collection, the free trip, £100 a week, dry inside, and optional shelving.
+
 ## 2026-10-27 — Deposit and cancellation list
 
 A £50 deposit on the phone secures the cube. Nothing is charged on the page. Under the dates, if the week is gone, people leave the day, the weeks, a name and a phone for the cancellation list. The out-of-area email list is unchanged. Neither form sends anywhere yet.
