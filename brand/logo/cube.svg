@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="19.418mm" height="22.000mm" viewBox="0 0 19.418 22.000">
+<title>Cube</title>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 9.709 0.000 L 18.687 5.184 L 9.709 10.367 L 0.731 5.184 Z"/>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 0.000 6.449 L 8.978 11.633 L 8.978 22.000 L 0.000 16.816 Z"/>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 10.440 11.633 L 19.418 6.449 L 19.418 16.816 L 10.440 22.000 Z"/>
+</svg>

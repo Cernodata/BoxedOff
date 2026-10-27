@@ -1,4 +1,50 @@
-# BoxedOff
+## 2026-10-27 — Deposit and cancellation list
+
+A £50 deposit on the phone secures the cube. Nothing is charged on the page. Under the dates, if the week is gone, people leave the day, the weeks, a name and a phone for the cancellation list. The out-of-area email list is unchanged. Neither form sends anywhere yet.
+
+## 2026-10-27 — Favicon, SEO, and the phone
+
+Favicon is linked at `/favicon.ico`, `/favicon.svg`, and `/favicon-32.png`, and the same files sit at the repo root so the local preview can load them. Title is “10ft storage cube hire from £100 a week | Cube Drop”. The hero says 10ft. 01565 662244 sits under the postcode box, in the price panel, the close, and the footer. The nav stays one line. FAQ schema matches the page, including how to book.
+
+
+
+The site photos are a full-size 10ft corrugated cube, not the small cabinet. Files: `brand/media/cube-hero.jpg` and `brand/media/cube-door.jpg`. Contact on the page is Cube Drop Limited, 01565 662244.
+
+
+
+New photos are `brand/media/cube-hero.jpg` and `brand/media/cube-door.jpg`. Charcoal cube, orange corner, bamboo bay, real Cube Drop stacked logo composited on the end. The old `bamboo-unit.jpg` path is no longer used on the page.
+
+
+
+Backup of the previous wording is `backups/index-2026-10-27.html` and `backups/wording-2026-10-27.md`. Hero stays “Don’t visit your storage.” The rest of the page was rewritten in that voice. “A brighter tomorrow” is gone. Fit numbers are unchanged: 2.44m cube, 2.8m gap, flat ground. Price is still £100 a week, delivery free, one week minimum.
+
+
+
+Hero H1 is “Don’t visit your storage.” The line under it says the cube comes to the door and is collected, the trip is free, £100 a week from one week, it stays dry, and shelving is optional. The kicker stays “Storage to you”.
+
+## 2026-10-27 — Cube, not box
+
+The product name on the site is cube. Customer copy, the H1, FAQs, and the offer schema say cube. CSS class names are unchanged.
+
+## 2026-10-27 — Price and product language
+
+£100 a week. Delivery and collection are free. Minimum hire is 1 week, maximum still 26. The product is a secure storage box, not a container. Anti-moisture and condensation treatment is included. Shelving is optional. White-glove delivery to the door. `RATES` in `site/index.html` is storage 100, delivery 0, min 1.
+
+## 2026-10-27 — On-page fit and headline
+
+H1 is “Storage container for hire, delivered to you.” Fit guide: the unit is 2.44m wide, the clear gap is 2.8m, and the ground must be flat and firm. FAQs match that.
+
+## 2026-10-27 — Storage only
+
+Cube Drop is a storage-to-you service. The line under the name is STORAGE. Care and Living are off the site, the brand page, and the print pack.
+
+## 2026-10-27 — Cube Drop
+
+The customer name is Cube Drop. Orange `#FF7A00`, charcoal `#1A1A1A`, Montserrat, isometric cube. Site and `brand/index.html` use it. Print pack is `brand/CUBEDROP-brand-pack.zip`. Rebuild with `brand/print-pack/build_pack.py`. The live domain is still boxedoff.uk.
+
+## 2026-10-15 — Print pack for decals and stationery
+
+Stamp lockups outlined from Bricolage Grotesque, open frame filled (not a stroke). Pack is `brand/BOXEDOFF-brand-pack.zip` (svg, pdf, eps, png, spec). Rebuild with `brand/print-pack/build_pack.py`. Vercel build skips `print-pack` and the zip.
 
 ## 2026-10-07 — Vercel and security
 
@@ -9,6 +55,10 @@ Vercel runs `npm run build` → `dist/` with `index.html` at the deploy root plu
 ## 2026-10-07 — GitHub
 
 Repository: https://github.com/Cernodata/BoxedOff (public). `README.md` and `.gitignore` at repo root. Push with `git -c safe.directory=W:/Cursor/BoxedOff push` if on the W: drive.
+
+## 2026-10-07 — amperee-demo
+
+Created private GitHub repo: https://github.com/Cernodata/amperee-demo. Source lives at `W:\Cursor\Caravan System` (Vite/React Amperee demo). Pushed `main` with `vercel.json` security headers, CSP, `robots.txt` noindex, `.vercelignore`.
 
 ## 2026-10-07 — Three brand directions
 

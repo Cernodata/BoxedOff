@@ -1,9 +1,10 @@
-# BOXEDOFF
+# Cube Drop
 
-Premium 10ft storage container hire — delivered to the drive, collected when the hire ends.
+Premium 10ft storage container hire — delivered to the drive, collected when the hire ends. The customer-facing name is Cube Drop.
 
 - **Live site (preview):** `site/index.html` — storage booking, postcode check, guide pricing from £50/week.
-- **Brand book:** `brand/index.html` — three brand directions (Stamp is the customer-facing direction).
+- **Brand book:** `brand/index.html` — Cube Drop colour, type and logo rules.
+- **Print pack:** `brand/CUBEDROP-brand-pack.zip` — SVG, PDF, EPS and PNG for decals and stationery.
 - **Handover:** `memory.md` — decisions and history for agents.
 
 ## Run locally

@@ -1,0 +1,42 @@
+CUBE DROP — logo pack for decals, vinyl and stationery
+
+Use the SVG or PDF. They are vectors and scale to any size.
+EPS is for older plotters. PNG is for software that cannot take vectors.
+At 100% the sizes below match across SVG, PDF, EPS and PNG.
+White and reversed files can look blank on a white screen. The artwork is still there.
+Previews are for looking at. Do not print from the previews folder.
+
+COLOURS
+Orange     #FF7A00   RGB 255 122 0   CMYK 0 52 100 0
+Charcoal   #1A1A1A   RGB 26 26 26   print 100% K
+Light grey #E9E9E9   RGB 233 233 233
+Off white  #F8F8F8   RGB 248 248 248
+
+WHICH FILE
+Letterhead, cards, invoices on white     logo-horizontal-colour
+Van, container, window on a dark ground  logo-horizontal-reversed
+Black-only print or black vinyl          logo-horizontal-black
+White vinyl                              logo-horizontal-white
+Tall space                               logo-stacked-colour
+Small badge, embroidery, favicon         icon-orange
+
+RULES
+Clear space around the logo equals the height of the cube.
+Do not stretch, distort or alter the logo.
+Use only these colours. Do not add shadows, outlines or effects.
+Wordmark: Montserrat Bold. The line under the name is STORAGE.
+Cube Drop is a storage-to-you service. Do not add Care or Living.
+
+SIZE AT 100%
+logo-horizontal-colour            136.2 mm  ×   22.7 mm
+logo-horizontal-reversed          136.2 mm  ×   22.7 mm
+logo-horizontal-black             136.2 mm  ×   22.7 mm
+logo-horizontal-white             136.2 mm  ×   22.7 mm
+logo-stacked-colour               112.6 mm  ×   43.0 mm
+logo-stacked-reversed             112.6 mm  ×   43.0 mm
+logo-stacked-black                112.6 mm  ×   43.0 mm
+logo-stacked-white                112.6 mm  ×   43.0 mm
+icon-orange                        19.4 mm  ×   22.0 mm
+icon-black                         19.4 mm  ×   22.0 mm
+icon-white                         19.4 mm  ×   22.0 mm
+icon-orange-on-charcoal            30.0 mm  ×   30.0 mm

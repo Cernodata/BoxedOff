@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30.000mm" height="30.000mm" viewBox="0 0 30.000 30.000">
+<title>Cube on a charcoal square.</title>
+<path fill="#1A1A1A" fill-rule="nonzero" d="M 0.000 30.000 L 30.000 30.000 L 30.000 0.000 L 0.000 0.000 Z"/>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 15.000 4.000 L 23.978 9.184 L 15.000 14.367 L 6.022 9.184 Z"/>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 5.291 10.449 L 14.269 15.633 L 14.269 26.000 L 5.291 20.816 Z"/>
+<path fill="#FF7A00" fill-rule="nonzero" d="M 15.731 15.633 L 24.709 10.449 L 24.709 20.816 L 15.731 26.000 Z"/>
+</svg>
