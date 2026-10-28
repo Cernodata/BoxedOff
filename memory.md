@@ -1,3 +1,11 @@
+## 2026-10-28 — Wooden frame, no marks on the floor
+
+The cube sits on a wooden frame and never rests on the floor. Added to the cube facts, the fit “ground” line, the flat-drive FAQ (schema matches), and the terms delivery section.
+
+## 2026-10-28 — Deposit on the website, balance after the call
+
+The £50 is paid on the website and reserves the cube. The phone call is to go through the details, and the balance follows that call. Updated the price line, hero chip, booking help, receipt, three FAQs (and their schema), the footer, terms and privacy. The form still only emails the request: card payment is not built, so the receipt says “Request received” rather than claiming the deposit was taken.
+
 ## 2026-10-28 — Cookie consent for Google Analytics and Meta Pixel
 
 New: `site/consent.js` and `site/consent.css`, linked from all four pages. To switch on, put the IDs at the top of `consent.js` (`GA_ID`, `META_PIXEL_ID`). While both are empty there is no banner and nothing loads. With IDs, first visit shows a banner with equally weighted "Reject all" and "Accept all", plus "Choose" (analytics and marketing tick-boxes, both unticked). Nothing loads before a yes. The choice is saved in localStorage `cd-consent` for 12 months. "Cookie settings" in every footer reopens it; withdrawing deletes _ga/_fbp cookies and reloads. Successful form sends call `window.cdTrack` (GA `generate_lead`, Meta `Lead`; waitlist is `join_waitlist`). The vercel.json CSP now allows googletagmanager.com, google-analytics.com and facebook.net/com. Cookie and privacy policies rewritten to match; new placeholders `[ID]` (cookies) and `[14 MONTHS]` (GA retention, privacy). Tested with fake IDs at 1280 and 390, then reverted.
