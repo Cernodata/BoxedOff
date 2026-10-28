@@ -1,0 +1,70 @@
+:root {
+  --cream: #f8f8f8;
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #e9e9e9;
+  --kiln: #ff7a00;
+  --kiln-ink: #b85400;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--kiln); outline-offset: 3px; }
+.wrap { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 28px;
+  background: var(--ink);
+  color: var(--cream);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.brand .tm { font-size: 0.42em; letter-spacing: 0; vertical-align: super; margin-left: 1px; }
+.nav .back { font-size: 15px; text-decoration: none; padding: 10px 0; }
+.nav .back:hover { color: var(--kiln); }
+main { padding: 56px 0 72px; }
+.kicker { letter-spacing: 0.16em; text-transform: uppercase; font-size: 12px; color: var(--muted); margin: 0 0 14px; }
+h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; line-height: 1.2; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 24px 0 6px; }
+p, li { max-width: 68ch; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+.updated { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+.ph { background: #ffe2c7; color: var(--ink); padding: 0 4px; font-weight: 700; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--line); }
+th { font-weight: 700; }
+footer { padding: 36px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer p { margin: 6px 0; max-width: none; }
+footer nav { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+footer nav a { text-decoration: none; color: var(--ink); font-weight: 700; }
+footer nav a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .nav { padding: 14px 16px; }
+  .brand { font-size: 13px; }
+  main { padding: 36px 0 56px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  td { border-top: 0; padding: 2px 0; }
+  tr { border-top: 1px solid var(--line); padding: 10px 0; }
+  td:first-child { font-weight: 700; }
+}

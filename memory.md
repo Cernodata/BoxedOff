@@ -1,3 +1,41 @@
+## 2026-10-28 — Cookie consent for Google Analytics and Meta Pixel
+
+New: `site/consent.js` and `site/consent.css`, linked from all four pages. To switch on, put the IDs at the top of `consent.js` (`GA_ID`, `META_PIXEL_ID`). While both are empty there is no banner and nothing loads. With IDs, first visit shows a banner with equally weighted "Reject all" and "Accept all", plus "Choose" (analytics and marketing tick-boxes, both unticked). Nothing loads before a yes. The choice is saved in localStorage `cd-consent` for 12 months. "Cookie settings" in every footer reopens it; withdrawing deletes _ga/_fbp cookies and reloads. Successful form sends call `window.cdTrack` (GA `generate_lead`, Meta `Lead`; waitlist is `join_waitlist`). The vercel.json CSP now allows googletagmanager.com, google-analytics.com and facebook.net/com. Cookie and privacy policies rewritten to match; new placeholders `[ID]` (cookies) and `[14 MONTHS]` (GA retention, privacy). Tested with fake IDs at 1280 and 390, then reverted.
+
+## 2026-10-28 — Legal pages and placeholders
+
+New: `site/privacy.html` (UK GDPR notice), `site/cookies.html` (no cookies, so no banner), `site/terms.html` (draft terms of hire, including the 14-day cancellation right for phone/online bookings), and shared `site/legal.css`. The homepage footer has a legal row: company number, registered office, and links to Privacy, Cookies and Terms of hire. Each form has a one-line privacy note. The sitemap lists all four pages. Links are relative so they work locally under /site/ and on Vercel at the root.
+
+Placeholders are wrapped in `<span class="ph">[...]</span>` and highlighted light orange. Search `class="ph"` to find them all: index 2, privacy 11, cookies 2, terms 19. They cover the company number, registered office, ICO registration number, payment provider, email/phone provider, accountant, retention periods, deposit/balance/late-cancellation rules, VAT, lock, insurance, damage, wasted delivery and liability limit. The terms need a solicitor's check before launch.
+
+## 2026-10-28 — Forms email Cube Drop; container keyword
+
+The reserve, cancellation-list and waitlist forms POST to `api/lead.js`, a Vercel function that emails each entry through Resend. It reads `RESEND_API_KEY` (required), `LEAD_TO` (default drop@cubedrop.co.uk) and `LEAD_FROM` (default onboarding@resend.dev) from env. It has a hidden `company` honeypot, field checks and a 10-digit phone check. With no key or a failed send it returns an error, and the page says “That didn’t send. Call 01565 662244…” rather than a false confirmation. Tested with a mocked Resend. Locally there is no /api, so the failure message shows.
+
+Search: title is now “10ft storage container hire from £100 a week | Cube Drop”. The description leads with “Storage container hire without the van”. The FAQ “Is it a shipping container?” became “Is this storage container hire?” in the page and the schema. The headline stays “A storage cube, at your door.”
+
+## 2026-10-28 — Pre-launch audit
+
+The canonical tag, og:url, structured data, robots.txt and sitemap now point at https://cubedrop.co.uk/ (the domain being registered at 123-reg). The hero has a 900px phone copy (`cube-cheshire-900.jpg`) via srcset. Orange text on light backgrounds uses `--kiln-ink` #b85400 for contrast; buttons and dark sections keep #FF7A00. Added: a skip link, full-date calendar labels, a phone-number check, the earliest date on the cancellation list, and bigger tap targets on mobile. The FAQ now reads “Are delivery and collection included?” in the page and the schema.
+
+Still open before launch: the reserve, cancellation and waitlist forms do not send anywhere. The footer has no company number, registered office or privacy policy. drop@cubedrop.co.uk has no mailbox yet.
+
+## 2026-10-28 — Hero photo restored
+
+The edited line on the cube was removed. `brand/media/cube-cheshire.jpg` is the original Cheshire photo again, with the Cube Drop wordmark on the side.
+
+## 2026-10-28 — Line on the cube
+
+The hero photo no longer shows the Cube Drop wordmark or Storage / Care / Living. The side of the cube reads “A storage cube,” then “at your door”.
+
+## 2026-10-28 — Cheshire hero photo
+
+The hero is `brand/media/cube-cheshire.jpg`, from `W:\Cursor\Kilo\cubedrop\cubedrop-10ft-cheshire.png`. It is the cube on a block-paved drive in front of a brick house. The wordmark on the cube still reads Storage / Care / Living.
+
+## 2026-10-28 — The £30 advert
+
+The comparison is an illustration, labelled “Not our price.” Headline: “£30 storage? If only.” The cards lead with £135 estimated and £100 all-in for one week. £30 is a small-unit advert, not a 10ft cube and not every provider. The name on the page is Cube Drop. No live competitor was showing a verified £30 offer to cite.
+
 ## 2026-10-27 — Email
 
 The public address is drop@cubedrop.co.uk. It sits under the phone in the hero, the close, and the footer, and on the LocalBusiness details.

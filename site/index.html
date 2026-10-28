@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10ft storage cube hire from £100 a week | Cube Drop</title>
-<meta name="description" content="Hire a secure 10ft storage cube from £100 a week. Free delivery and collection, from one week. Knutsford, Wilmslow, Alderley Edge and Holmes Chapel.">
-<link rel="canonical" href="https://boxedoff.uk/">
-<meta name="robots" content="index, follow">
+<title>10ft storage container hire from £100 a week | Cube Drop</title>
+<meta name="description" content="Storage container hire without the van. A secure 10ft cube from £100 a week, delivered and collected free. Knutsford, Wilmslow, Alderley Edge, Holmes Chapel.">
+<link rel="canonical" href="https://cubedrop.co.uk/">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cube Drop">
-<meta property="og:title" content="10ft storage cube hire from £100 a week | Cube Drop">
+<meta property="og:title" content="10ft storage container hire from £100 a week | Cube Drop">
 <meta property="og:description" content="A secure 10ft storage cube, delivered and collected free. £100 a week, from one week.">
-<meta property="og:url" content="https://boxedoff.uk/">
-<meta property="og:image" content="https://boxedoff.uk/brand/media/cube-hero.jpg">
-<meta property="og:image:alt" content="A full-size 10ft Cube Drop storage cube on a gravel drive">
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="720">
+<meta property="og:url" content="https://cubedrop.co.uk/">
+<meta property="og:image" content="https://cubedrop.co.uk/brand/media/cube-cheshire.jpg">
+<meta property="og:image:alt" content="A full-size 10ft Cube Drop cube on a block-paved drive in front of a brick house">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1073">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1A1A1A">
@@ -23,10 +23,11 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" as="image" href="/brand/media/cube-hero.jpg?v=10ft">
+<link rel="preload" as="image" href="/brand/media/cube-cheshire.jpg?v=cheshire" imagesrcset="/brand/media/cube-cheshire-900.jpg?v=cheshire 900w, /brand/media/cube-cheshire.jpg?v=cheshire 1600w" imagesizes="(max-width: 900px) 100vw, 52vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="consent.css">
 <style>
   :root {
     --cream: #f8f8f8;
@@ -43,9 +44,13 @@
     --serif: "Montserrat", sans-serif;
     --sans: "Montserrat", sans-serif;
     --kiln: #ff7a00;
+    --kiln-ink: #b85400;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .skip { position: absolute; left: 12px; top: -60px; z-index: 10; background: var(--kiln); color: #1a1a1a; padding: 10px 14px; font-weight: 700; }
+  .skip:focus { top: 12px; }
   body {
     margin: 0;
     background: var(--cream);
@@ -304,12 +309,12 @@
     text-underline-offset: 4px;
   }
   .hero-photo { margin: 0; min-height: 420px; }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 46% center; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 68%; }
   section { padding: 88px 0; }
   .book { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .book-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 28px; }
   .steps { display: flex; gap: 18px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  .steps span.on { color: var(--kiln); }
+  .steps span.on { color: var(--kiln-ink); font-weight: 700; }
   .book-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 22px; align-items: start; }
   .panel {
     background: var(--cream);
@@ -345,7 +350,7 @@
     font-size: 18px;
   }
   .price-lines { margin: 0; padding: 0; list-style: none; }
-  .price-lines .free { color: var(--kiln); font-weight: 700; }
+  .price-lines .free { color: var(--kiln-ink); font-weight: 700; }
   .price-lines li {
     display: flex;
     justify-content: space-between;
@@ -385,7 +390,7 @@
     cursor: pointer;
   }
   .grid button:disabled { color: #c4bdb3; cursor: default; }
-  .grid button.in { background: #f8d6cc; }
+  .grid button.in { background: #ffe2c7; }
   .grid button.start { background: var(--kiln); color: #1a1a1a; font-weight: 700; }
   .stay { margin: 14px 0 0; font-size: 15px; }
   .people { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
@@ -402,10 +407,22 @@
   .facts { margin: 22px 0 0; padding: 0; list-style: none; }
   .facts li { padding: 12px 0; border-top: 1px solid var(--line); }
   .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 36px; }
-  .how span { font-size: 28px; display: block; color: var(--kiln); }
+  .how span { font-size: 28px; display: block; color: var(--kiln-ink); }
   .note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
   .note { padding: 24px; background: var(--stone); }
   .note h3 { margin: 0 0 8px; font-size: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sums .note h3 { font-family: var(--serif); font-weight: 700; font-size: 28px; letter-spacing: -0.03em; text-transform: none; margin: 0; }
+  .bill-total { font-size: clamp(56px, 6vw, 84px); line-height: 0.9; letter-spacing: -0.04em; margin: 18px 0 0; }
+  .bill-tag { margin: 8px 0 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sums .price-lines { margin-top: 18px; }
+  .sums .aside { margin: 14px 0 0; font-size: 15px; }
+  .bill-ours { background: #1a1a1a; color: #f8f8f8; }
+  .bill-ours .kicker { color: var(--kiln); }
+  .bill-ours .bill-tag { color: var(--kiln); }
+  .bill-ours .price-lines li { border-top-color: #3a3a3a; }
+  .bill-ours .price-lines .free { color: var(--kiln); }
+  .sums .closer { font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.05; letter-spacing: -0.03em; margin: 36px 0 12px; max-width: 16em; }
+  .sums .signoff { font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 18px; }
   .uses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; }
   .uses article, .faq article { padding: 24px; background: var(--stone); }
   .uses h3, .faq h3 { margin: 0 0 8px; font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: -0.03em; line-height: 1.15; }
@@ -418,7 +435,7 @@
   .close p { margin: 16px 0 0; }
   .close a:not(.btn) { color: #f8f8f8; font-size: 28px; font-weight: 700; letter-spacing: -0.03em; text-decoration: none; }
   .close a:not(.btn):hover { color: var(--kiln); }
-  .close a.mail { font-size: 16px; font-weight: 500; letter-spacing: 0; }
+  .close a.mail { display: inline-block; padding: 12px 0; font-size: 16px; font-weight: 500; letter-spacing: 0; }
   footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
   .foot { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 28px; align-items: start; }
   footer strong { display: block; margin-bottom: 8px; color: var(--ink); font-family: var(--sans); font-weight: 700; letter-spacing: 0.08em; font-size: 16px; text-transform: uppercase; }
@@ -427,6 +444,12 @@
   footer a.phone, footer a.mail { color: var(--ink); font-weight: 700; }
   footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
   footer p { margin: 0; }
+  footer .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 28px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; }
+  footer .legal nav { flex-direction: row; gap: 18px; }
+  footer .legal a { color: var(--ink); font-weight: 700; display: inline-block; padding: 6px 0; }
+  .ph { background: #ffe2c7; color: var(--ink); padding: 0 4px; font-weight: 700; }
+  .privacy-note { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+  .privacy-note a { color: inherit; text-underline-offset: 3px; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   @media (max-width: 900px) {
     .wrap { width: min(1120px, calc(100% - 32px)); }
@@ -434,7 +457,7 @@
     .brand { font-size: 13px; letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
     .brand svg { width: 22px; height: auto; }
     .nav-links { gap: 12px; }
-    .nav-links .keep { font-size: 14px; white-space: nowrap; }
+    .nav-links .keep { font-size: 14px; white-space: nowrap; padding: 12px 0; }
     .nav-links .btn { padding: 12px 14px; font-size: 14px; white-space: nowrap; }
     .nav-links a:not(.btn):not(.keep) { display: none; }
     .hero, .book-grid, .split, .how, .note-grid, .uses, .people, .reserve-row, .foot, .measures, .usp-grid { grid-template-columns: 1fr; display: grid; }
@@ -463,26 +486,32 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://cubedrop.co.uk/#service",
       "name": "10ft storage cube hire",
-      "serviceType": "Storage cube hire",
-      "url": "https://boxedoff.uk/",
+      "serviceType": "Storage container hire",
+      "alternateName": "10ft storage container hire",
+      "url": "https://cubedrop.co.uk/",
       "description": "A secure 10ft cube, delivered to your door and collected at the end. You don't drive to a lock-up. Delivery and collection are free.",
       "areaServed": ["Knutsford", "Alderley Edge", "Wilmslow", "Holmes Chapel"],
-      "provider": { "@type": "Organization", "name": "Cube Drop Limited", "url": "https://boxedoff.uk/", "telephone": "+441565662244", "email": "drop@cubedrop.co.uk" },
+      "provider": { "@id": "https://cubedrop.co.uk/#business" },
       "offers": {
         "@type": "Offer",
         "price": "100",
         "priceCurrency": "GBP",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "100", "priceCurrency": "GBP", "unitCode": "WEE", "unitText": "week" },
         "description": "£100 a week. Free delivery and collection on every order. Minimum 1 week."
       }
     },
     {
       "@type": "LocalBusiness",
-      "name": "Cube Drop Limited",
-      "url": "https://boxedoff.uk/",
+      "@id": "https://cubedrop.co.uk/#business",
+      "name": "Cube Drop",
+      "legalName": "Cube Drop Limited",
+      "url": "https://cubedrop.co.uk/",
       "telephone": "+441565662244",
       "email": "drop@cubedrop.co.uk",
-      "image": "https://boxedoff.uk/brand/media/cube-hero.jpg",
+      "logo": "https://cubedrop.co.uk/apple-touch-icon.png",
+      "image": "https://cubedrop.co.uk/brand/media/cube-cheshire.jpg",
       "priceRange": "£100 a week",
       "areaServed": ["Knutsford", "Alderley Edge", "Wilmslow", "Holmes Chapel"]
     },
@@ -516,7 +545,7 @@
         },
         {
           "@type": "Question",
-          "name": "Is delivery and collection included?",
+          "name": "Are delivery and collection included?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. We bring the cube to your door and collect it when the hire ends, and both are free. The earliest day is a week ahead. You don't tow it." }
         },
         {
@@ -531,8 +560,8 @@
         },
         {
           "@type": "Question",
-          "name": "Is it a shipping container?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. It is a secure cube, treated so it stays dry, with shelving if you want it. It is not a shipping container and it is not a skip." }
+          "name": "Is this storage container hire?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, with less faff. You hire a secure 10ft cube for the weeks you need, from £100 a week, and we deliver and collect it free. It is not a bare shipping container: it is treated so it stays dry, with shelving if you want it. And it is not a skip." }
         },
         {
           "@type": "Question",
@@ -576,6 +605,7 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#book">Skip to booking</a>
 <header class="nav">
   <a class="brand" href="#top">
     <svg class="mark" width="26" height="29" viewBox="0 0 19.418 22" aria-hidden="true">
@@ -609,7 +639,7 @@
       </ul>
       <form class="post-row" id="hero-form">
         <label class="sr" for="hero-postcode">Postcode</label>
-        <input id="hero-postcode" name="postcode" placeholder="Postcode" autocomplete="postal-code" enterkeyhint="search">
+        <input id="hero-postcode" name="postcode" placeholder="Postcode" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" enterkeyhint="search">
         <button class="btn" type="submit" id="hero-check">Check delivery</button>
       </form>
       <div class="post-feedback" id="hero-feedback" data-state="idle" aria-live="polite" hidden>
@@ -623,7 +653,7 @@
       <p class="fine" id="hero-hint">Knutsford, Alderley Edge, Wilmslow, Holmes Chapel and nearby.</p>
     </div>
     <figure class="hero-photo">
-      <img src="/brand/media/cube-hero.jpg?v=10ft" width="1280" height="720" alt="A full-size 10ft Cube Drop cube on a gravel drive, corrugated steel, with the logo on the door">
+      <img src="/brand/media/cube-cheshire.jpg?v=cheshire" srcset="/brand/media/cube-cheshire-900.jpg?v=cheshire 900w, /brand/media/cube-cheshire.jpg?v=cheshire 1600w" sizes="(max-width: 900px) 100vw, 52vw" width="1600" height="1073" fetchpriority="high" alt="A full-size 10ft Cube Drop cube on a block-paved drive in front of a brick house">
     </figure>
   </section>
 
@@ -633,6 +663,48 @@
       <article class="usp"><b>£100 a week</b><span>One week is enough. Four weeks is £400.</span></article>
       <article class="usp"><b>It stays dry</b><span>Moisture and condensation treatment is included.</span></article>
       <article class="usp"><b>Shelves if you want them</b><span>Optional. We price them when you book.</span></article>
+    </div>
+  </section>
+
+  <section class="sums" id="sums">
+    <div class="wrap">
+      <p class="kicker">An illustration. Not our price.</p>
+      <h2>£30 storage? If only.</h2>
+      <p class="lede">That is the price of the empty room. Not the price of getting your belongings into it.</p>
+      <p>You have seen the adverts. Storage from £30. Lovely. Now, unless your sofa has learned to drive, there are a few other things to pay for.</p>
+      <div class="note-grid">
+        <article class="note bill">
+          <p class="kicker">Traditional self-storage</p>
+          <h3>The real cost</h3>
+          <p class="bill-total">£135</p>
+          <p class="bill-tag">Estimated total</p>
+          <ul class="price-lines">
+            <li><span>Advertised storage</span><span>£30</span></li>
+            <li><span>Van hire</span><span>£70</span></li>
+            <li><span>Fuel</span><span>£15</span></li>
+            <li><span>Padlock and insurance</span><span>£20</span></li>
+          </ul>
+          <p class="aside">And that assumes one day of van hire covers both journeys. Need the van twice? Add another £70 plus fuel.</p>
+          <p class="aside">Your time, lifting, loading, unloading and a wasted weekend? Not included.</p>
+        </article>
+        <article class="note bill bill-ours">
+          <p class="kicker">Cube Drop</p>
+          <h3>The simple alternative</h3>
+          <p class="bill-total">£100</p>
+          <p class="bill-tag">All-in, one week</p>
+          <ul class="price-lines">
+            <li><span>One week’s cube hire</span><span>£100</span></li>
+            <li><span>Delivery to your drive</span><span class="free">Included</span></li>
+            <li><span>Collection afterwards</span><span class="free">Included</span></li>
+            <li><span>Van hire</span><span class="free">Not needed</span></li>
+            <li><span>Trips to a storage unit</span><span class="free">None</span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="closer">A cheap storage unit is only cheap if your belongings can teleport.</p>
+      <p>£30 sounded cheaper. Until you needed to actually use it.</p>
+      <p class="signoff">Cube Drop. Storage without the faff.</p>
+      <p class="fine">An illustration of a short hire, not a quote. £30 is the sort of figure a small unit advertises. It is not the price of a 10ft cube, and it is not what every storage place charges. Van, fuel and insurance vary. On these assumptions, the example adds up to £135.</p>
     </div>
   </section>
 
@@ -654,7 +726,7 @@
             <span>How long</span>
             <div class="stepper">
               <button type="button" id="weeks-down" aria-label="Fewer weeks">–</button>
-              <strong id="weeks-label">4 weeks</strong>
+              <strong id="weeks-label" aria-live="polite">4 weeks</strong>
               <button type="button" id="weeks-up" aria-label="More weeks">+</button>
             </div>
           </div>
@@ -665,7 +737,7 @@
           </ul>
           <p class="fine">A £50 deposit on the phone secures the cube. Nothing is charged on this page. Call <a href="tel:+441565662244">01565 662244</a>.</p>
           <label class="field" for="book-postcode" style="margin-top:18px">Postcode
-            <input id="book-postcode" autocomplete="postal-code" placeholder="WA16 8AB">
+            <input id="book-postcode" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" placeholder="WA16 8AB">
           </label>
           <div class="post-feedback book-feedback" id="book-feedback" data-state="idle" aria-live="polite" hidden>
             <span class="post-feedback-mark" aria-hidden="true"></span>
@@ -677,6 +749,10 @@
           <p class="fine">Knutsford, Alderley Edge, Wilmslow and Holmes Chapel, plus about 12 km around the middle of those four.</p>
         </div>
         <div class="panel" id="date-panel">
+          <div class="sr" aria-hidden="true">
+            <label for="lead-company">Company</label>
+            <input id="lead-company" name="company" tabindex="-1" autocomplete="off">
+          </div>
           <div id="calendar-block">
             <div class="cal-head">
               <button type="button" id="prev-month" aria-label="Previous month">‹</button>
@@ -698,6 +774,7 @@
               <p class="help" id="reserve-help">Add a postcode we cover, a delivery day, and a phone number.</p>
               <button class="btn" type="button" id="reserve" disabled>Reserve these dates</button>
             </div>
+            <p class="privacy-note">We use your name and number only to arrange this hire. See our <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms of hire</a>.</p>
             <div class="hold">
               <p class="hold-title">If those dates are gone</p>
               <p>We only keep a small number. Tell us the day you need it, and for how many weeks. If a cube comes back, we call.</p>
@@ -720,6 +797,7 @@
                   <p class="help">A £50 deposit on the call is what holds it, if a cube comes free.</p>
                   <button class="btn" type="submit">Join the list</button>
                 </div>
+                <p class="privacy-note">We call only about these dates, then delete your details once they pass. <a href="privacy.html">Privacy policy</a>.</p>
                 <p class="status" id="cancel-status" aria-live="polite"></p>
               </form>
             </div>
@@ -737,6 +815,7 @@
               <input id="wait-email" type="email" placeholder="Email" autocomplete="email">
               <button class="btn" type="submit">Tell me</button>
             </div>
+            <p class="privacy-note">One email when we reach you. No newsletter. Ask us to remove you at any time. <a href="privacy.html">Privacy policy</a>.</p>
             <p class="status" id="wait-status" aria-live="polite"></p>
           </form>
         </div>
@@ -768,7 +847,7 @@
   <section id="unit">
     <div class="wrap split">
       <figure>
-        <img src="/brand/media/cube-door.jpg?v=10ft" width="1280" height="720" alt="The door end of a 10ft Cube Drop cube, with locking bars, an orange corner and a bamboo bay">
+        <img src="/brand/media/cube-door.jpg?v=10ft" width="1280" height="720" loading="lazy" decoding="async" alt="The door end of a 10ft Cube Drop cube, with locking bars, an orange corner and a bamboo bay">
       </figure>
       <div>
         <p class="kicker">The cube</p>
@@ -877,7 +956,7 @@
           <p>Yes. It has to sit flat and firm for its whole length. Concrete, tarmac, block paving or compacted stone. Not a slope, not a lawn, and not ground that will sink.</p>
         </article>
         <article>
-          <h3>Is delivery and collection included?</h3>
+          <h3>Are delivery and collection included?</h3>
           <p>Yes. We bring the cube to your door and collect it when the hire ends, and both are free. The earliest day is a week ahead. You don't tow it.</p>
         </article>
         <article>
@@ -889,8 +968,8 @@
           <p>Yes. Book the weeks the work takes. What can't live in the dust stays locked, outside. We collect the cube when the rooms are back.</p>
         </article>
         <article>
-          <h3>Is it a shipping container?</h3>
-          <p>No. It is a secure cube, treated so it stays dry, with shelving if you want it. It is not a shipping container and it is not a skip.</p>
+          <h3>Is this storage container hire?</h3>
+          <p>Yes, with less faff. You hire a secure 10ft cube for the weeks you need, from £100 a week, and we deliver and collect it free. It is not a bare shipping container: it is treated so it stays dry, with shelving if you want it. And it is not a skip.</p>
         </article>
         <article>
           <h3>Can I add shelving?</h3>
@@ -953,7 +1032,17 @@
     </nav>
     <p>Guide prices. We confirm the figure on the phone before anything is paid.</p>
   </div>
+  <div class="wrap legal">
+    <p>Cube Drop Limited. Registered in England and Wales, company number <span class="ph">[COMPANY NUMBER]</span>. Registered office: <span class="ph">[REGISTERED OFFICE ADDRESS]</span>.</p>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="terms.html">Terms of hire</a>
+      <button type="button" class="cookie-settings" data-cookie-settings hidden>Cookie settings</button>
+    </nav>
+  </div>
 </footer>
+<script src="consent.js" defer></script>
 <script>
 const RATES = { storage: 100, delivery: 0, min: 1, max: 26, lead: 7 };
 // Centroid of Knutsford, Alderley Edge, Wilmslow and Holmes Chapel.
@@ -974,14 +1063,15 @@ const FEEDBACK = {
   empty: { title: "Enter a postcode", detail: "A full UK postcode, like WA16 8AB." },
   partial: { title: "Nearly there", detail: "Add the rest of the postcode so we can check the round." },
   checking: { title: "Checking your postcode", detail: "One moment while we see if we deliver to you." },
-  yes: (name) => ({ title: "You're on the round", detail: "We deliver to " + name + ". Pick your weeks and a day below." }),
-  no: { title: "Not on this round yet", detail: "Leave your email on the right and we'll write when we reach you." },
+  yes: (name) => ({ title: "You're on the round", detail: "We deliver to " + name + ". Pick your weeks and a delivery day." }),
+  no: { title: "Not on this round yet", detail: "Leave your email in the booking panel and we'll write when we reach you." },
   bad: { title: "We don't recognise that postcode", detail: "Check the spelling, or try a nearby postcode you know is correct." },
   error: { title: "Could not check just now", detail: "Try again in a moment. Your connection may have dropped." }
 };
 
 const gbp = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
 const dayFmt = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" });
+const longDayFmt = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" });
 const monthFmt = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" });
 
 const els = {
@@ -1015,6 +1105,10 @@ const els = {
 };
 
 function strip(raw) { return (raw || "").toUpperCase().replace(/[^A-Z0-9]/g, ""); }
+function phoneOk(raw) { return (raw || "").replace(/\D/g, "").length >= 10; }
+function isoDay(date) {
+  return date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+}
 function haversine(lat1, lng1, lat2, lng2) {
   const earth = 6371;
   const p1 = lat1 * Math.PI / 180;
@@ -1181,7 +1275,7 @@ function render(renderOpts) {
   document.querySelector("#step-dates").classList.toggle("on", Boolean(state.deliver));
 
   renderMonth(covered);
-  const ready = covered && state.deliver && els.name.value.trim() && els.phone.value.trim();
+  const ready = covered && state.deliver && els.name.value.trim() && phoneOk(els.phone.value);
   els.reserve.disabled = !ready;
   document.querySelector("#step-book").classList.toggle("on", ready);
   if (area.state === "checking") els.help.textContent = "Checking the postcode.";
@@ -1191,6 +1285,7 @@ function render(renderOpts) {
   else if (!covered) els.help.textContent = "Check a postcode we cover to open the calendar.";
   else if (!state.deliver) els.help.textContent = "Choose a delivery day. The earliest is a week from today.";
   else if (!els.name.value.trim() || !els.phone.value.trim()) els.help.textContent = "Add a name and phone. We call to confirm. Nothing is charged yet.";
+  else if (!phoneOk(els.phone.value)) els.help.textContent = "Check the phone number. We need the full number to call you.";
   else els.help.textContent = "A £50 deposit on the call secures the cube. Nothing is charged yet.";
 }
 
@@ -1210,6 +1305,8 @@ function renderMonth(covered) {
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = String(day);
+    button.setAttribute("aria-label", longDayFmt.format(date));
+    button.setAttribute("aria-pressed", String(sameDay(date, state.deliver)));
     const bookable = covered && date >= firstBookable();
     button.disabled = !bookable;
     if (state.deliver && lastNight && date >= state.deliver && date <= lastNight) button.classList.add("in");
@@ -1264,9 +1361,47 @@ document.querySelector("#next-month").addEventListener("click", () => {
 });
 els.name.addEventListener("input", render);
 els.phone.addEventListener("input", render);
-document.querySelector("#reserve").addEventListener("click", () => {
+const SEND_FAILED = "That didn’t send. Call 01565 662244 and we’ll take it from there.";
+async function sendLead(lead) {
+  try {
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.assign({ company: document.querySelector("#lead-company").value }, lead))
+    });
+    return res.ok;
+  } catch (err) {
+    return false;
+  }
+}
+function busy(button, on, label) {
+  button.disabled = on;
+  button.classList.toggle("is-busy", on);
+  if (label) button.textContent = label;
+}
+
+document.querySelector("#reserve").addEventListener("click", async () => {
   const area = state.area;
   const collect = addDays(state.deliver, state.weeks * 7);
+  const button = els.reserve;
+  busy(button, true, "Sending");
+  const sent = await sendLead({
+    kind: "reserve",
+    name: els.name.value.trim(),
+    phone: els.phone.value.trim(),
+    postcode: area.postcode || els.bookPost.value.trim(),
+    area: area.name,
+    deliver: longDayFmt.format(state.deliver),
+    collect: longDayFmt.format(collect),
+    weeks: String(state.weeks),
+    total: gbp.format(grand())
+  });
+  busy(button, false, "Reserve these dates");
+  if (!sent) {
+    els.help.textContent = SEND_FAILED;
+    return;
+  }
+  if (window.cdTrack) window.cdTrack("generate_lead", { form: "reserve", value: grand(), currency: "GBP" });
   els.receiptCopy.textContent = els.name.value.trim() + ", we have a 10ft cube for " + area.name + " from " + dayFmt.format(state.deliver) + " to " + dayFmt.format(collect) + ". We’ll call " + els.phone.value.trim() + " to confirm the drive.";
   els.calendar.hidden = true;
   els.receipt.hidden = false;
@@ -1279,7 +1414,7 @@ document.querySelector("#again").addEventListener("click", () => {
   els.calendar.hidden = false;
   render();
 });
-document.querySelector("#cancel-list").addEventListener("submit", (event) => {
+document.querySelector("#cancel-list").addEventListener("submit", async (event) => {
   event.preventDefault();
   const date = document.querySelector("#cancel-date").value;
   const weeks = Number(document.querySelector("#cancel-weeks").value);
@@ -1290,16 +1425,39 @@ document.querySelector("#cancel-list").addEventListener("submit", (event) => {
     status.textContent = "Add the day, the weeks, a name and a phone number.";
     return;
   }
+  if (!phoneOk(phone)) {
+    status.textContent = "Check the phone number. We need the full number to call you.";
+    return;
+  }
   const start = new Date(date + "T00:00:00");
   const word = weeks === 1 ? "week" : "weeks";
-  status.textContent = name + ", you’re on the cancellation list for " + dayFmt.format(start) + ", " + weeks + " " + word + ". If a cube comes free, we’ll call " + phone + ".";
+  const button = event.currentTarget.querySelector("button[type=submit]");
+  busy(button, true, "Sending");
+  status.textContent = "";
+  const sent = await sendLead({ kind: "cancel", name, phone, date: longDayFmt.format(start), weeks: String(weeks) });
+  busy(button, false, "Join the list");
+  if (sent && window.cdTrack) window.cdTrack("generate_lead", { form: "cancellation_list" });
+  status.textContent = sent
+    ? name + ", you’re on the cancellation list for " + dayFmt.format(start) + ", " + weeks + " " + word + ". If a cube comes free, we’ll call " + phone + "."
+    : SEND_FAILED;
 });
-document.querySelector("#waitlist").addEventListener("submit", (event) => {
+document.querySelector("#waitlist").addEventListener("submit", async (event) => {
   event.preventDefault();
   const email = document.querySelector("#wait-email").value.trim();
-  els.waitStatus.textContent = email ? "Noted. We’ll write to " + email + " when the round reaches you." : "Add an email and we’ll write when the round reaches you.";
+  if (!email) {
+    els.waitStatus.textContent = "Add an email and we’ll write when the round reaches you.";
+    return;
+  }
+  const button = event.currentTarget.querySelector("button[type=submit]");
+  busy(button, true, "Sending");
+  els.waitStatus.textContent = "";
+  const sent = await sendLead({ kind: "waitlist", email, postcode: els.bookPost.value.trim(), area: state.area.name || "" });
+  busy(button, false, "Tell me");
+  if (sent && window.cdTrack) window.cdTrack("join_waitlist", { form: "waitlist" });
+  els.waitStatus.textContent = sent ? "Noted. We’ll write to " + email + " when the round reaches you." : SEND_FAILED;
 });
 
+document.querySelector("#cancel-date").min = isoDay(firstBookable());
 render();
 </script>
 </body>
