@@ -1,3 +1,15 @@
+## 2026-10-30 — Blue hero photo
+
+Replaced the hero with the cobalt blue cube on the drive. Files are `brand/media/cube-cheshire.jpg` (1024×768) and `cube-cheshire-900.jpg`. The crop is `object-position: 38% 50%` so the cube stays in the tall desktop frame. Logo on the photo left as supplied.
+
+## 2026-10-30 — Blue door photo
+
+Replaced `brand/media/cube-door.jpg` with the cobalt blue door photo, 1024×576. The hero is still the older wide shot of the dark cube on the drive.
+
+## 2026-10-30 — Brand grey becomes RAL 5013
+
+The website charcoal `#1A1A1A` is now RAL 5013 Cobalt Blue, on screen `#193153`. Orange stays `#FF7A00`. Light grey panels stay. Updated `site/index.html`, `site/legal.css`, `site/consent.css`, the legal page theme colour, and the favicon files. Print logos are unchanged.
+
 ## 2026-10-28 — Wooden frame, no marks on the floor
 
 The cube sits on a wooden frame and never rests on the floor. Added to the cube facts, the fit “ground” line, the flat-drive FAQ (schema matches), and the terms delivery section.

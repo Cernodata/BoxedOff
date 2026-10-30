@@ -7,7 +7,7 @@
   max-width: 560px;
   margin: 0;
   padding: 0;
-  background: #1a1a1a;
+  background: #193153;
   color: #f8f8f8;
   border: 1px solid #3a3a3a;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
@@ -28,7 +28,7 @@
   appearance: none;
   border: 0;
   background: #ff7a00;
-  color: #1a1a1a;
+  color: #193153;
   font: inherit;
   font-weight: 700;
   padding: 12px 18px;
@@ -58,7 +58,7 @@ body.cc-open { padding-bottom: 220px; }
   padding: 6px 0;
   font: inherit;
   font-weight: 700;
-  color: var(--ink, #1a1a1a);
+  color: var(--ink, #193153);
   cursor: pointer;
 }
 .cookie-settings:hover { text-decoration: underline; text-underline-offset: 3px; }
