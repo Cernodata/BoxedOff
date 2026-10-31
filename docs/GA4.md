@@ -4,8 +4,9 @@
 
 | | |
 |--|--|
-| Property | `561711191` (Cube Drop Website) |
-| Measurement | `G-VNP2ZTELH7` |
+| Account | `414149836` (Cube Drop) |
+| Property | `561707174` (Cube Drop Website) |
+| Measurement | `G-NDB0WET7TM` |
 | Stream | https://www.cubedrop.co.uk |
 
 Service account (read API): `cursor-analytics@model-aria-502620-r2.iam.gserviceaccount.com` — add as **Viewer** on the GA4 property.
@@ -15,7 +16,7 @@ Service account (read API): `cursor-analytics@model-aria-502620-r2.iam.gservicea
 Set environment variable (Production + Preview):
 
 ```bash
-GA_MEASUREMENT_ID=G-VNP2ZTELH7
+GA_MEASUREMENT_ID=G-NDB0WET7TM
 ```
 
 Redeploy. Build injects the ID into `dist/consent.js`.

@@ -2,10 +2,13 @@
   "mcpServers": {
     "ga4-cubedrop": {
       "command": "npx",
-      "args": ["-y", "mcp-ga4"],
+      "args": [
+        "-y",
+        "mcp-ga4"
+      ],
       "env": {
         "GOOGLE_APPLICATION_CREDENTIALS": "W:\\Cursor\\Agent Manager\\ga4-key.json",
-        "GA4_PROPERTY_ID": "561711191"
+        "GA4_PROPERTY_ID": "561707174"
       }
     }
   }

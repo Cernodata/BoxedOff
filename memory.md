@@ -1,3 +1,8 @@
+## 2026-10-31 — Cube Drop moved to its own Analytics account
+
+- Account **414149836** (Cube Drop). Property **561707174**, measurement **G-NDB0WET7TM**.
+- The earlier property **561711191** under Behaviourally is removed after this deploy.
+
 ## 2026-10-31 — GA4 full tracking (Cube Drop)
 
 - GA4 property **561711191**, measurement **G-VNP2ZTELH7**, stream https://www.cubedrop.co.uk
