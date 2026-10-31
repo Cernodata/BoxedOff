@@ -1,3 +1,11 @@
+## 2026-10-31 — GA4 full tracking (Cube Drop)
+
+- GA4 property **561711191**, measurement **G-VNP2ZTELH7**, stream https://www.cubedrop.co.uk
+- `consent.js` v2: Consent Mode, manual `page_view`, build injects ID from `GA_MEASUREMENT_ID` or `ga4.config.json`
+- `analytics-funnel.js`: postcode, pricing, delivery, forms, nav, phone/email
+- Vercel: set `GA_MEASUREMENT_ID=G-VNP2ZTELH7` and redeploy
+- Docs: `docs/GA4.md`, MCP: `.cursor/mcp.json`
+
 ## 2026-10-30 — Blue hero photo
 
 Replaced the hero with the cobalt blue cube on the drive. Files are `brand/media/cube-cheshire.jpg` (1024×768) and `cube-cheshire-900.jpg`. The crop is `object-position: 38% 50%` so the cube stays in the tall desktop frame. Logo on the photo left as supplied.

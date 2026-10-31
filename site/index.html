@@ -1044,6 +1044,7 @@
   </div>
 </footer>
 <script src="consent.js" defer></script>
+<script src="analytics-funnel.js" defer></script>
 <script>
 const RATES = { storage: 100, delivery: 0, min: 1, max: 26, lead: 7 };
 // Centroid of Knutsford, Alderley Edge, Wilmslow and Holmes Chapel.
@@ -1207,11 +1208,13 @@ async function lookup(raw, options) {
     }
     if (seq !== lookupSeq) return state.area;
     state.area = result;
+    if (window.cdFunnel) window.cdFunnel.postcodeResult(result);
     render({ pulse: opts.pulse, celebrate: opts.pulse && result.state === "yes" });
     return state.area;
   } catch (err) {
     if (seq !== lookupSeq) return state.area;
     state.area = { state: "error" };
+    if (window.cdFunnel) window.cdFunnel.postcodeResult(state.area);
     render({ pulse: opts.pulse });
     return state.area;
   }
@@ -1288,6 +1291,13 @@ function render(renderOpts) {
   else if (!els.name.value.trim() || !els.phone.value.trim()) els.help.textContent = "Add a name and phone, so we can call to go through the details.";
   else if (!phoneOk(els.phone.value)) els.help.textContent = "Check the phone number. We need the full number to call you.";
   else els.help.textContent = "A £50 deposit on the website reserves the cube. We then call to go through the details.";
+
+  if (window.cdFunnel) {
+    window.cdFunnel.weeksChanged(state.weeks, grand());
+    if (covered) window.cdFunnel.bookingStep("price", 2);
+    if (state.deliver) window.cdFunnel.bookingStep("dates", 3);
+    if (ready) window.cdFunnel.bookingStep("ready_to_reserve", 4);
+  }
 }
 
 function renderMonth(covered) {
@@ -1314,6 +1324,9 @@ function renderMonth(covered) {
     if (sameDay(date, state.deliver)) button.classList.add("start");
     button.addEventListener("click", () => {
       state.deliver = date;
+      if (window.cdFunnel) {
+        window.cdFunnel.deliverySelected(isoDay(date), state.weeks);
+      }
       render();
     });
     els.grid.append(button);
@@ -1338,6 +1351,7 @@ document.querySelector("#hero-form").addEventListener("submit", async (event) =>
   }
   const area = await syncPost(els.heroPost.value, "hero", true, { animate: true, pulse: true });
   if (area.state === "partial" || area.state === "bad" || area.state === "error") return;
+  if (window.cdFunnel) window.cdFunnel.ctaClick("hero_check_delivery", "hero");
   window.setTimeout(() => {
     document.querySelector("#book").scrollIntoView({ behavior: "smooth" });
   }, 280);
@@ -1386,6 +1400,7 @@ document.querySelector("#reserve").addEventListener("click", async () => {
   const collect = addDays(state.deliver, state.weeks * 7);
   const button = els.reserve;
   busy(button, true, "Sending");
+  if (window.cdFunnel) window.cdFunnel.formAttempt("reserve");
   const sent = await sendLead({
     kind: "reserve",
     name: els.name.value.trim(),
@@ -1402,7 +1417,9 @@ document.querySelector("#reserve").addEventListener("click", async () => {
     els.help.textContent = SEND_FAILED;
     return;
   }
-  if (window.cdTrack) window.cdTrack("generate_lead", { form: "reserve", value: grand(), currency: "GBP" });
+  if (window.cdFunnel) {
+    window.cdFunnel.formSuccess("reserve", { value: grand(), hire_weeks: state.weeks });
+  }
   els.receiptCopy.textContent = els.name.value.trim() + ", we have a 10ft cube for " + area.name + " from " + dayFmt.format(state.deliver) + " to " + dayFmt.format(collect) + ". We’ll call " + els.phone.value.trim() + " to go through the details.";
   els.calendar.hidden = true;
   els.receipt.hidden = false;
@@ -1435,9 +1452,10 @@ document.querySelector("#cancel-list").addEventListener("submit", async (event) 
   const button = event.currentTarget.querySelector("button[type=submit]");
   busy(button, true, "Sending");
   status.textContent = "";
+  if (window.cdFunnel) window.cdFunnel.formAttempt("cancellation_list");
   const sent = await sendLead({ kind: "cancel", name, phone, date: longDayFmt.format(start), weeks: String(weeks) });
   busy(button, false, "Join the list");
-  if (sent && window.cdTrack) window.cdTrack("generate_lead", { form: "cancellation_list" });
+  if (sent && window.cdFunnel) window.cdFunnel.formSuccess("cancellation_list");
   status.textContent = sent
     ? name + ", you’re on the cancellation list for " + dayFmt.format(start) + ", " + weeks + " " + word + ". If a cube comes free, we’ll call " + phone + "."
     : SEND_FAILED;
@@ -1452,9 +1470,10 @@ document.querySelector("#waitlist").addEventListener("submit", async (event) => 
   const button = event.currentTarget.querySelector("button[type=submit]");
   busy(button, true, "Sending");
   els.waitStatus.textContent = "";
+  if (window.cdFunnel) window.cdFunnel.formAttempt("waitlist");
   const sent = await sendLead({ kind: "waitlist", email, postcode: els.bookPost.value.trim(), area: state.area.name || "" });
   busy(button, false, "Tell me");
-  if (sent && window.cdTrack) window.cdTrack("join_waitlist", { form: "waitlist" });
+  if (sent && window.cdFunnel) window.cdFunnel.formSuccess("waitlist");
   els.waitStatus.textContent = sent ? "Noted. We’ll write to " + email + " when the round reaches you." : SEND_FAILED;
 });
 
